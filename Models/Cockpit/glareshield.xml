@@ -87,7 +87,7 @@
 
 <model>
 	<name>adf2</name>
-	<path>Aircraft/An-124/Models/Cockpit/Instruments/ADF/ctl62-adf2.xml</path>
+	<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/ADF/ctl62-adf2.xml</path>
 	 <offsets>
 		<x-m>0.905</x-m>
 		<y-m>0.260</y-m>
@@ -98,7 +98,7 @@
 
 <model>
 	<name>transponder</name>
-	<path>Aircraft/An-124/Models/Cockpit/Instruments/TDR/ctl92-transponder.xml</path>
+	<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/TDR/ctl92-transponder.xml</path>
 	 <offsets>
 		<x-m>0.905</x-m>
 		<y-m>0.330</y-m>

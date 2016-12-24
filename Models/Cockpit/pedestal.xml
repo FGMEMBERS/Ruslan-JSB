@@ -1,39 +1,37 @@
 <PropertyList>
 
-<path>pedestal.ac</path>
+	<path>pedestal.ac</path>
 
-<!-- CDU -->
+	<!-- CDU -->
 
+	<animation>
+		<type>material</type>
+		<object-name>Mesh286</object-name>
+		<object-name>forward_panel_0</object-name>
+		<object-name>Mesh1.001_1</object-name>
+		<object-name>EVAC_1_1</object-name>
+		<emission>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>   0.25 </red>
+			<green> 0.25 </green>
+			<blue>  0.25 </blue>
+		</emission>
+	</animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>Mesh286</object-name>
-    <object-name>forward_panel_0</object-name>
-    <object-name>Mesh1.001_1</object-name>
-    <object-name>EVAC_1_1</object-name>
-    <emission>
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>   0.25 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-    </emission>
-  </animation>
+	<model>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/CDU/boeing.xml</path>
+		<offsets>
+			<x-m> 0.880</x-m>
+			<y-m> 0.120</y-m>
+			<z-m> 0.487</z-m>
+			<pitch-deg>-75</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-	<path>Aircraft/An-124/Models/Cockpit/Instruments/CDU/boeing.xml</path>
-	<offsets>
-		<x-m> 0.880</x-m>
-		<y-m> 0.120</y-m>
-		<z-m> 0.487</z-m>
-		<pitch-deg>-75</pitch-deg>
-	</offsets>
+	<!-- ND -->
 
-</model>
-
-<!-- ND -->
-
-<model>
-		<path>Aircraft/An-124/Models/Cockpit/Instruments/MFD/ND.xml</path>
+	<model>
+		<path>Aircraft/Ruslna-JSB/Models/Cockpit/Instruments/MFD/ND.xml</path>
 		<offsets>
 			<x-m>0.90</x-m>
 			<y-m>-0.09</y-m>
@@ -47,7 +45,6 @@
 			</greater-than-equals>
 		</condition-->
 	</model>
-
 
 <!-- SPEEDBRAKE LEVER -->
 

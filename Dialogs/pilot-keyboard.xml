@@ -60,6 +60,22 @@
 				<command>property-toggle</command>
 				<property>/engines/engine[3]/reverser</property>
 			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/engines/engine[4]/reverser</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/engines/engine[5]/reverser</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/engines/engine[6]/reverser</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/engines/engine[7]/reverser</property>
+			</binding>
 		</key>
 
 		<!--key n="7">

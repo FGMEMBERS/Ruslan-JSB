@@ -4,6 +4,20 @@
 
 	<default>
 
+		<menu n="3">
+			<item>
+				<name>autopilot</name>
+				<label>Autopilot Settings</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/Ruslan-JSB/Dialogs/autopilot9.xml");
+						autopilot.open();
+					</script>
+				</binding>
+			</item>
+		</menu>
+
 		<menu n="100">
 			<enabled type="bool">true</enabled>
 			<label>An-124 Ruslan</label>
@@ -16,7 +30,7 @@
 				</binding>
 			</item>
 
-			<item>
+			<!-- item>
 				<label>NWS ON</label>
 				<binding>
 					<command>property-assign</command>
@@ -32,7 +46,7 @@
 					<property>controls/gear/nosegear-steering-enabled</property>
 					<value>false</value>
 				</binding>
-			</item>
+			</item -->
 
 			<item>
 				<label>Select Ivchenko DT18T Engines</label>

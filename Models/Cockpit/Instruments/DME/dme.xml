@@ -15,6 +15,7 @@
 			</less-than>
 		</condition>
 	</animation>
+
 	<animation>
 		<name>NAV 2 on/off</name>
 		<type>select</type>
@@ -27,8 +28,7 @@
 		</condition>
 	</animation>
 
-
-<!--distancias 0-->
+	<!--distancias 0-->
 
 	<animation>
 		<type>textranslate</type>
@@ -41,6 +41,7 @@
 			<y>1</y>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dist1-10</object-name>
@@ -52,6 +53,7 @@
 			<y>1</y>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dist1-1</object-name>
@@ -63,6 +65,7 @@
 			<y>1</y>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dist1-.1</object-name>
@@ -74,8 +77,7 @@
 		</axis>
 	</animation>
 
-
-<!--distancias 1-->
+	<!--distancias 1-->
 
 	<animation>
 		<type>textranslate</type>
@@ -88,6 +90,7 @@
 			<y>1</y>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dist2-10</object-name>
@@ -99,6 +102,7 @@
 			<y>1</y>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dist2-1</object-name>
@@ -110,6 +114,7 @@
 			<y>1</y>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dist2-.1</object-name>
@@ -121,25 +126,23 @@
 		</axis>
 	</animation>
 
+	<animation>
+		<type>material</type>
+		<object-name>Bezel</object-name>
+		<object-name>Screens</object-name>
+		<emission>
+			<red>   0.5 </red>
+			<green> 0.5 </green>
+			<blue>  0.5 </blue>
+		<	factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
 
-<animation>
-    <type>material</type>
-	<object-name>Bezel</object-name>
-	<object-name>Screens</object-name>
-    <emission>
-      <red>   0.5 </red>
-      <green> 0.5 </green>
-      <blue>  0.5 </blue>
-	<factor-prop>controls/lighting/instruments-norm</factor-prop>
-    </emission>
-  </animation>
-
-
-<!-- LoD -->
- <animation>
-   <type>range</type>
-   <min-m>0</min-m>
-   <max-m>20</max-m>
- </animation>
+	<!-- LoD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20</max-m>
+	</animation>
 
 </PropertyList>
