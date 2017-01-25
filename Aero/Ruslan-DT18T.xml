@@ -58,7 +58,7 @@
 		<vtailarea unit="M2"> 125.61 </vtailarea>
 		<vtailarm  unit="M" >  31.034 </vtailarm>
 		<location name="AERORP" unit="M">
-			<x>   2.00 </x>
+			<x>   1.00 </x>
 			<y>   0.00 </y>
 			<z>   0.00 </z>
 		</location>
@@ -80,7 +80,7 @@
 		<izz unit="KG*M2"> 48870406.4866679 </izz>
 		<emptywt unit="KG" > 175029.9558 </emptywt>
 		<location name="CG" unit="M">
-			<x>  2.00 </x>
+			<x>  1.00 </x>
 			<y>  0.00 </y>
 			<z>  0.00 </z>
 		</location>
@@ -142,7 +142,7 @@
 		<pointmass name="Passengers"> 
 			<weight unit="LBS"> 0.00 </weight>  
 			<location name="POINTMASS" unit="M"> 
-				<x>-17 </x>	<!-- upp deck behind wing centre section, 88 seats -->
+				<x>  0.0000 </x>	<!-- upp deck behind wing centre section, 88 seats -->
 				<y>  0.0000 </y>
 				<z> -2.5000 </z> 
 			</location> 
@@ -151,7 +151,7 @@
 		<pointmass name="Cargo"> 
 			<weight unit="LBS">0</weight> 
 			<location name="POINTMASS" unit="M"> 
-				<x> 1.00 </x>
+				<x> 0.00 </x>
 				<y> 0.00 </y>
 				<z> 0.00 </z>
 			</location> 
@@ -174,9 +174,6 @@
 			<damping_coeff unit="LBS/FT/SEC"> 214000.00 </damping_coeff>
 			<damping_coeff_rebound unit="LBS/FT/SEC"> 214000.00 </damping_coeff_rebound>
 			<break_group>NONE</break_group>
-			<!-- max_steer unit="DEG">
-				<property>/controls/gear/nosegear-angle</property>
-			</max_steer -->
 			<max_steer unit="DEG">45</max_steer>
 			<retractable>1</retractable>
 		</contact>
@@ -487,6 +484,8 @@
 
 	</ground_reactions>
 
+<system file="NWS"/>
+
 	<propulsion>
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine1 -->
@@ -537,7 +536,7 @@
 			<feed>4</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  2.4940 </x>
+					<x>  0.4940 </x>
 					<y> -10.4939 </y>
 					<z>  -1.0000</z>
 				</location>
@@ -567,7 +566,7 @@
 			<feed>9</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  2.4940 </x>
+					<x>  0.4940 </x>
 					<y>  10.4939 </y>
 					<z>  -1.0000</z>
 				</location>
@@ -581,7 +580,7 @@
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine4 -->
 			<location unit="M">
-				<x>   6.3951 </x>
+				<x>   8.3951 </x>
 				<y>  17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
@@ -853,7 +852,7 @@
 
 	<system file="TriCycle_PushbackJSBSIM"/>
 
-	<flight_control name="FCS: C-5">
+	<flight_control name="FCS: Ruslan">
 
 		<channel name="Pitch">
 
@@ -1165,10 +1164,10 @@
 					<table>
 						<independentVar lookup="row">aero/alpha-rad</independentVar>
 						<tableData>
-					              -0.20  -0.980
-					               0.00   0.500
-						       0.23   1.500
-						       0.60   0.900
+					              -0.20  -1.080
+					               0.00   0.600
+						       0.23   1.600
+						       0.60   1.000
 						</tableData>   
 
 					</table>
@@ -1181,7 +1180,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/flap-pos-deg</property>
-					<value> 0.05500 </value>
+					<value> 0.06000 </value>
 				</product>
 			</function>
 
@@ -1201,7 +1200,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/elevator-pos-rad</property>
-					<value>0.2</value>
+					<value>0.25</value>
 				</product>
 			</function>
 
@@ -1260,7 +1259,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/flap-pos-deg</property>
-					<value> 0.00197 </value>
+					<value> 0.00145 </value>
 				</product>
 			</function>
 
@@ -1270,7 +1269,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>gear/gear-pos-norm</property>
-					<value>0.025</value>
+					<value>0.020</value>
 				</product>
 			</function>
 
@@ -1280,7 +1279,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/speedbrake-pos-norm</property>
-					<value>0.03</value>
+					<value>0.035</value>
 				</product>
 			</function>
 
@@ -1292,11 +1291,11 @@
 					<table>
 						<independentVar lookup="row">aero/beta-rad</independentVar>
 						<tableData>
-							-1.57    1.230
-							-0.26    0.050
+							-1.57    1.000
+							-0.26    0.030
 							 0.00    0.000
-							 0.26    0.050
-							 1.57    1.230
+							 0.26    0.030
+							 1.57    1.000
 						</tableData>
 					</table>
 				</product>
@@ -1308,7 +1307,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<abs><property>fcs/elevator-pos-norm</property></abs>
-					<value>0.04</value>
+					<value>0.035</value>
 				</product>
 			</function>
 		</axis>

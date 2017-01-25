@@ -175,7 +175,7 @@
 			<group>
 				<layout>table</layout>
 				<text>
-					<label>Wings Level</label>
+					<label>Wings Lvl</label>
 					<halign>right</halign>
 					<row>0</row>
 					<col>0</col>
@@ -191,7 +191,7 @@
 					</binding>
 				</radio>
 				<text>
-					<label>Roll Hold</label>
+					<label>Roll Hld</label>
 					<halign>right</halign>
 					<row>1</row>
 					<col>0</col>
@@ -216,7 +216,7 @@
 					</binding>
 				</input>
 				<text>
-					<label>Heading Bug</label>
+					<label>Hdg Bug</label>
 					<halign>right</halign>
 					<row>2</row>
 					<col>0</col>
@@ -241,7 +241,7 @@
 					</binding>
 				</input>
 				<text>
-					<label>True Heading</label>
+					<label>True Hdg</label>
 					<halign>right</halign>
 					<row>3</row>
 					<col>0</col>
@@ -256,7 +256,7 @@
 					<visible>
 						<property>/autopilot/settings/gps-driving-true-heading</property>
 					</visible>
-					<label>GPS/FMS Heading</label>
+					<label>GPS/FMS Hdg</label>
 					<halign>right</halign>
 					<row>3</row>
 					<col>0</col>
@@ -299,7 +299,7 @@
 					<live>true</live>
 				</text>
 				<text>
-					<label>NAV1 CDI Course</label>
+					<label>NAV1 CDI Crs</label>
 					<halign>right</halign>
 					<row>4</row>
 					<col>0</col>
@@ -331,6 +331,61 @@
 
 		<group>
 			<layout>vbox</layout>
+
+			<group>
+				<layout>hbox</layout>
+				<checkbox>
+					<label>Velocity Control</label>
+					<halign>fill</halign>
+					<property>/sim/gui/dialogs/autopilot/speed-active</property>
+					<live>true</live>
+					<binding>
+						<command>dialog-apply</command>
+					</binding>
+					<binding>
+						<command>nasal</command>
+						<script>vel.enable()</script>
+					</binding>
+				</checkbox>
+			</group>
+
+			<group>
+				<layout>table</layout>
+				<text>
+					<label>Speed with Throttle</label>
+					<halign>right</halign>
+					<row>0</row>
+					<col>0</col>
+				</text>
+				<radio>
+					<row>0</row>
+					<col>1</col>
+					<property>/sim/gui/dialogs/autopilot/speed-with-throttle</property>
+					<live>true</live>
+					<binding>
+					<command>nasal</command>
+					<script>vel.set("speed-with-throttle")</script>
+					</binding>
+				</radio>
+				<text>
+					<label>Speed with Pitch</label>
+					<halign>right</halign>
+					<row>1</row>
+					<col>0</col>
+				</text>
+				<radio>
+					<row>1</row>
+					<col>1</col>
+					<property>/sim/gui/dialogs/autopilot/speed-with-pitch-trim</property>
+					<live>true</live>
+					<binding>
+						<command>nasal</command>
+						<script>vel.set("speed-with-pitch-trim")</script>
+					</binding>
+				</radio>
+			</group>
+
+			<hrule/>
 
 			<group>
 				<layout>table</layout>
@@ -397,60 +452,6 @@
 					</binding>
 				</input>
 			</group>
-
-			<hrule/>
-
-			<group>
-				<layout>hbox</layout>
-				<checkbox>
-					<label>Velocity Control</label>
-					<halign>fill</halign>
-					<property>/sim/gui/dialogs/autopilot/speed-active</property>
-					<live>true</live>
-					<binding>
-						<command>dialog-apply</command>
-					</binding>
-					<binding>
-						<command>nasal</command>
-						<script>vel.enable()</script>
-					</binding>
-				</checkbox>
-			</group>
-			<group>
-				<layout>table</layout>
-				<text>
-					<label>Speed with Throttle</label>
-					<halign>right</halign>
-					<row>0</row>
-					<col>0</col>
-				</text>
-				<radio>
-					<row>0</row>
-					<col>1</col>
-					<property>/sim/gui/dialogs/autopilot/speed-with-throttle</property>
-					<live>true</live>
-					<binding>
-					<command>nasal</command>
-					<script>vel.set("speed-with-throttle")</script>
-					</binding>
-				</radio>
-				<text>
-					<label>Speed with Pitch</label>
-					<halign>right</halign>
-					<row>1</row>
-					<col>0</col>
-				</text>
-				<radio>
-					<row>1</row>
-					<col>1</col>
-					<property>/sim/gui/dialogs/autopilot/speed-with-pitch-trim</property>
-					<live>true</live>
-					<binding>
-						<command>nasal</command>
-						<script>vel.set("speed-with-pitch-trim")</script>
-					</binding>
-				</radio>
-			</group>
 		</group>  <!-- End of Speed -->
 
 		<vrule/>
@@ -479,7 +480,7 @@
 			<group>
 				<layout>table</layout>
 				<text>
-					<label>Vertical Speed</label>
+					<label>Vert. Spd</label>
 					<halign>right</halign>
 					<row>0</row>
 					<col>0</col>
@@ -505,7 +506,7 @@
 				</input>
 
 				<text>
-					<label>Pitch Hold</label>
+					<label>Pitch Hld</label>
 					<halign>right</halign>
 					<row>1</row>
 					<col>0</col>
@@ -530,7 +531,7 @@
 					</binding>
 				</input>
 				<text>
-					<label>AoA Hold</label>
+					<label>AoA Hld</label>
 					<halign>right</halign>
 					<row>2</row>
 					<col>0</col>
@@ -555,7 +556,7 @@
 					</binding>
 				</input>
 				<text>
-					<label>Altitude Hold</label>
+					<label>Alt. Hld</label>
 					<halign>right</halign>
 					<row>3</row>
 					<col>0</col>
@@ -580,7 +581,7 @@
 					</binding>
 				</input>
 				<text>
-					<label>AGL Hold</label>
+					<label>AGL Hld</label>
 					<halign>right</halign>
 					<row>4</row>
 					<col>0</col>
@@ -605,7 +606,7 @@
 					</binding>
 				</input>
 				<text>
-					<label>NAV1 Glideslope</label>
+					<label>NAV1 GS</label>
 					<halign>right</halign>
 					<row>5</row>
 					<col>0</col>
@@ -647,7 +648,7 @@
 				<layout>table</layout>
 
 				<text>
-					<label>Bank Angle Ltr</label>
+					<label>Bk Angle Ltr</label>
 					<halign>right</halign>
 					<row>0</row>
 					<col>0</col>

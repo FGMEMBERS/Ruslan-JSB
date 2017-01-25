@@ -30,12 +30,12 @@
 				</binding>
 			</item>
 
-			<!-- item>
+			<item>
 				<label>NWS ON</label>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/gear/nosegear-steering-enabled</property>
-					<value>true</value>
+					<property>fdm/jsbsim/systems/NWS/engaged</property>
+					<value>1</value>
 				</binding>
 			</item>
 
@@ -43,10 +43,10 @@
 				<label>NWS OFF</label>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/gear/nosegear-steering-enabled</property>
-					<value>false</value>
+					<property>fdm/jsbsim/systems/NWS/engaged</property>
+					<value>0</value>
 				</binding>
-			</item -->
+			</item>
 
 			<item>
 				<label>Select Ivchenko DT18T Engines</label>

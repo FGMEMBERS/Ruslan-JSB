@@ -204,7 +204,7 @@
 
 	<!--model>
 		<name>flaps</name>
-		<path>Aircraft/An-124/Models/Cockpit/Instruments/ai2/ai.xml</path>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/ai2/ai.xml</path>
 		<offsets>
 			<x-m>0.685</x-m>
 			<y-m>-0.16</y-m>
@@ -277,7 +277,7 @@
 	<!-- attitude indicator  -->
 	<model>
 		<name>ai</name>
-		<path>Aircraft/Ruslan-JSDB/Models/Cockpit/Instruments/ai/ai.xml</path>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/ai/ai.xml</path>
 		<offsets>
 			<x-m>0.689</x-m>
 			<y-m>0.51</y-m>

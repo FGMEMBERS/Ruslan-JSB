@@ -31,7 +31,7 @@
 		<model>
 
 			<!-- path to model file -->
-			<path>Aircraft/Ruslan-JSB/Models/Ruslan.xml</path>
+			<path>Aircraft/Ruslan-JSB/Models/Ruslan-T.xml</path>
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
@@ -124,6 +124,8 @@
 		</instrumentation>
 
 		<!-- Multiplay section if exists -->
+
+		<tanker type="bool">true</tanker>
 
 		<chase-distance-m type="double" archive="y">-100.0</chase-distance-m>
 
@@ -218,6 +220,12 @@
 				<default-field-of-view-deg type="double">70</default-field-of-view-deg>
 			</config>
 		</view>
+
+		<airport>
+			<runways>
+				<start-offset-m>25</start-offset-m>
+			</runways>
+		</airport>
 
 		<!--  
 			<checklists include="Ruslan-checklists.xml"/>

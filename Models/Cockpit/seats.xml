@@ -1,18 +1,18 @@
 <PropertyList>
 
-<path>seats.ac</path>
+	<path>seats.ac</path>
 
-  <animation>
-    <type>material</type>
-    <!--object-name>firstofficerseat</object-name>
-    <object-name>captainseat</object-name-->
-    <emission>
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>   0.25 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-    </emission>
-  </animation>
+	<animation>
+		<type>material</type>
+		<!--object-name>firstofficerseat</object-name>
+		<object-name>captainseat</object-name-->
+		<emission>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>   0.25 </red>
+			<green> 0.25 </green>
+			<blue>  0.25 </blue>
+		</emission>
+	</animation>
 
 	<!--animation>
 		<type>pick</type>
@@ -27,22 +27,22 @@
 		</action>
 	</animation>
 
-    <animation>
-        <type>translate</type>
-        <object-name>captainseat</object-name>
-        <property>controls/seat/captain/position-norm</property>
+	<animation>
+		<type>translate</type>
+		<object-name>captainseat</object-name>
+		<property>controls/seat/captain/position-norm</property>
 		<factor>0.5</factor>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<animation>
-        <type>translate</type>
-        <object-name>captainseat</object-name>
-        <property>controls/seat/captain/position-norm</property>
+		<type>translate</type>
+		<object-name>captainseat</object-name>
+		<property>controls/seat/captain/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -57,12 +57,12 @@
 				<dep>0.2</dep>
 			</entry>
 		</interpolation>
-        <axis>
-            <x> 0</x>
-            <y>-1</y>
-            <z> 0</z>
-        </axis>
-    </animation>
+		<axis>
+			<x> 0</x>
+			<y>-1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
 	
 	<animation>
 		<type>pick</type>
@@ -78,21 +78,21 @@
 	</animation>
 	
 	<animation>
-        <type>translate</type>
-        <object-name>firstofficerseat</object-name>
-        <property>controls/seat/firstofficer/position-norm</property>
+		<type>translate</type>
+		<object-name>firstofficerseat</object-name>
+		<property>controls/seat/firstofficer/position-norm</property>
 		<factor>0.5</factor>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<animation>
-        <type>translate</type>
-        <object-name>firstofficerseat</object-name>
-        <property>controls/seat/firstofficer/position-norm</property>
+		<type>translate</type>
+		<object-name>firstofficerseat</object-name>
+		<property>controls/seat/firstofficer/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -107,11 +107,11 @@
 				<dep>0.2</dep>
 			</entry>
 		</interpolation>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation-->
+	        <axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation-->
 
 </PropertyList>
