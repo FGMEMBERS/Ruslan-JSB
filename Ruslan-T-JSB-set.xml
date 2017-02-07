@@ -487,6 +487,24 @@
 
 	</controls>
 
+	<!-- Systems outside of sim-section -->
+
+	<tanker type="bool">true</tanker>
+
+	<systems>
+		<refuel>
+			<type>boom</type>
+			<serviceable type="bool">true</serviceable>
+			<max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+		</refuel>
+		<refuel>
+			<type>probe</type>
+			<serviceable type="bool">true</serviceable>
+			<max-fuel-transfer-lbs-min>4000</max-fuel-transfer-lbs-min>
+		</refuel>
+	</systems>
+
+
 	<!-- FDM section if exists -->
 	
 	<limits>
