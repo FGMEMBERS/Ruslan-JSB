@@ -19,7 +19,7 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-		<aero>Aero/Ruslan-DT18T</aero>
+		<aero>Aero/Ruslan-T</aero>
 
 		<!-- Splash Screens -->
 		<startup>
@@ -360,6 +360,13 @@
 			<tank n="7"><name>Right 3</name></tank>
 			<tank n="8"><name>Right 4</name></tank>
 			<tank n="9"><name>Right 5</name></tank>
+
+			<tank n="10"><name>Center 1</name></tank>
+			<tank n="11"><name>Center 2</name></tank>
+			<tank n="12"><name>Center 3</name></tank>
+			<tank n="13"><name>Center 4</name></tank>
+			<tank n="14"><name>Center 5</name></tank>
+			<tank n="15"><name>Center 6</name></tank>
 		</fuel>
 	</consumables>
 
@@ -406,20 +413,6 @@
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]" />
 			<min-lb>180</min-lb>
 			<max-lb>750</max-lb>
-		</weight>
-
-		<weight n="6">
-			<name>Passengers</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]" />
-			<min-lb>0</min-lb>
-			<max-lb>17600</max-lb>
-		</weight>
-
-		<weight n="7">
-			<name>Cargo</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]" />
-			<min-lb>0</min-lb>
-			<max-lb>330693</max-lb>
 		</weight>
 
 	</payload>
@@ -558,6 +551,23 @@
 		<pushback>
 			<activated type="bool">false</activated>
 		</pushback>
+		<refuel n="0">
+			<device type="string">RefuelBoom</device>
+			<boom-angle type="float">0.0</boom-angle>
+			<boom-extend type="float">0.0</boom-extend>
+		</refuel>
+		<refuel n="1">
+			<device type="string">RefuelProbe</device>
+			<probe-extended type="bool">false</probe-extended>
+		</refuel>
+		<refuel n="2">
+			<device type="string">RefuelProbe</device>
+			<probe-extended type="bool">false</probe-extended>
+		</refuel>
+		<refuel n="3">
+			<device type="string">RefuelProbe</device>
+			<probe-extended type="bool">false</probe-extended>
+		</refuel>
 	</voodoomaster>
 
 	<!-- instrumentation>

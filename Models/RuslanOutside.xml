@@ -82,7 +82,7 @@ An-124 Ruslan model configuration file
 
 	<!-- Liveries-->
 
-	<nasal>
+	<!-- nasal>
 	        <load>
 			var livery_update = aircraft.livery_update.new("Aircraft/Ruslan-JSB/Models/Liveries", 10);
         	</load>
@@ -90,7 +90,7 @@ An-124 Ruslan model configuration file
 		<unload>
 			livery_update.stop();
 		</unload>
-	</nasal>
+	</nasal -->
 
 	<!-- Livery Selection Animation -->
 

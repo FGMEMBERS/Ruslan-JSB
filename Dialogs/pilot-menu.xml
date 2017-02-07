@@ -49,6 +49,72 @@
 			</item>
 
 			<item>
+				<label>Extend Boom</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-angle</property>
+					<value>0.6</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-extend</property>
+					<value>1.0</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>Retract Boom</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-angle</property>
+					<value>0.0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel/boom-extend</property>
+					<value>0.0</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>Extend Probes</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[1]/probe-extended</property>
+					<value>true</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[2]/probe-extended</property>
+					<value>true</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[3]/probe-extended</property>
+					<value>true</value>
+				</binding>
+			</item>
+
+			<item>
+				<label>Retract Probes</label>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[1]/probe-extended</property>
+					<value>false</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[2]/probe-extended</property>
+					<value>false</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>voodoomaster/refuel[3]/probe-extended</property>
+					<value>false</value>
+				</binding>
+			</item>
+
+			<item>
 				<label>Select Ivchenko DT18T Engines</label>
 				<binding>
 					<command>property-assign</command>
