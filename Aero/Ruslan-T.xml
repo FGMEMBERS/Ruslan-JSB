@@ -86,7 +86,7 @@
 		</location>
 
 		<pointmass name="Pilot"> 
-			<weight unit="LBS"> 0.00 </weight> 
+			<weight unit="LBS"> 180.00 </weight> 
 			<location name="POINTMASS" unit="M"> 
 				<x>30.9843 </x>		<!-- just estimations from sketches -->
 				<y>-1.8000 </y>
@@ -95,7 +95,7 @@
 		</pointmass>
 
 		<pointmass name="First Officer"> 
-			<weight unit="LBS"> 0.00 </weight> 
+			<weight unit="LBS"> 180.00 </weight> 
 			<location name="POINTMASS" unit="M"> 
 				<x>30.9843 </x>
 				<y> 1.8000 </y>
@@ -104,7 +104,7 @@
 		</pointmass>
 
 		<pointmass name="Navigator"> 
-			<weight unit="LBS"> 0.00 </weight> 
+			<weight unit="LBS"> 180.00 </weight> 
 			<location name="POINTMASS" unit="M"> 
 				<x>28.98 </x>
 				<y>-1.6000 </y>
@@ -113,7 +113,7 @@
 		</pointmass>
 
 		<pointmass name="Radio"> 
-			<weight unit="LBS"> 0.00 </weight>  
+			<weight unit="LBS"> 180.00 </weight>  
 			<location name="POINTMASS" unit="M"> 
 				<x>26.9843 </x>	<!-- both on the right side, so middle between their seats -->
 				<y>-1.6000 </y>
@@ -122,7 +122,7 @@
 		</pointmass>
 
 		<pointmass name="Engineers"> 
-			<weight unit="LBS"> 0.00 </weight>
+			<weight unit="LBS"> 180.00 </weight>
 			<location name="POINTMASS" unit="M"> 
 				<x>28.2343 </x>	<!-- both on the right side, so middle between their seats -->
 				<y> 1.6000 </y>
@@ -131,9 +131,9 @@
 		</pointmass>
 
 		<pointmass name="Loadmasters"> 
-			<weight unit="LBS"> 0.00 </weight>  
+			<weight unit="LBS"> 180.00 </weight>  
 			<location name="POINTMASS" unit="M"> 
-				<x>22.4843 </x>	<!-- actually, one sits left, one sits right, so the equal each other out -->
+				<x>22.4843 </x>	<!-- actually, one sits left, one sits right, one on rest, so they equal each other out -->
 				<y>    0.00 </y>
 				<z>  154.75 </z> 
 			</location> 
@@ -482,10 +482,6 @@
 				<yaw>   0.00 </yaw>
 			</orient>
 			<feed>0</feed>
-			<feed>1</feed>
-			<feed>2</feed>
-			<feed>3</feed>
-			<feed>4</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>   4.3951 </x>
@@ -511,11 +507,7 @@
 				<roll>   0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>0</feed>
 			<feed>1</feed>
-			<feed>2</feed>
-			<feed>3</feed>
-			<feed>4</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>  0.4940 </x>
@@ -541,11 +533,7 @@
 				<roll>   0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>5</feed>
-			<feed>6</feed>
-			<feed>7</feed>
-			<feed>8</feed>
-			<feed>9</feed>
+			<feed>2</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>  0.4940 </x>
@@ -571,11 +559,7 @@
 				<roll>  0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>5</feed>
-			<feed>6</feed>
-			<feed>7</feed>
-			<feed>8</feed>
-			<feed>9</feed>
+			<feed>3</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>  4.3951 </x>
@@ -602,10 +586,6 @@
 				<yaw>   0.00 </yaw>
 			</orient>
 			<feed>0</feed>
-			<feed>1</feed>
-			<feed>2</feed>
-			<feed>3</feed>
-			<feed>4</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>   4.3951 </x>
@@ -631,11 +611,7 @@
 				<roll>   0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>0</feed>
 			<feed>1</feed>
-			<feed>2</feed>
-			<feed>3</feed>
-			<feed>4</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>  2.4940 </x>
@@ -661,11 +637,7 @@
 				<roll>   0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>5</feed>
-			<feed>6</feed>
-			<feed>7</feed>
-			<feed>8</feed>
-			<feed>9</feed>
+			<feed>2</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>  2.4940 </x>
@@ -691,11 +663,7 @@
 				<roll>  0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>5</feed>
-			<feed>6</feed>
-			<feed>7</feed>
-			<feed>8</feed>
-			<feed>9</feed>
+			<feed>3</feed>
 			<thruster file="direct">
 				<location unit="M">
 					<x>  4.3951 </x>
@@ -710,7 +678,55 @@
 			</thruster>
 		</engine>
 
-		<tank type="FUEL" number="0"> <!-- Left1 -->
+		<tank type="FUEL" number="0"> <!-- Feeder 1 -->
+			<location unit="M">
+				<x>   6.3951 </x>
+				<y> -17.6897 </y>
+				<z>  -1.0000 </z>
+			</location>
+			<priority>1</priority>
+			<capacity unit="LBS"> 250 </capacity>
+			<contents unit="LBS"> 250 </contents>
+			<type> JP-8 </type>
+		</tank>
+
+		<tank type="FUEL" number="1"> <!-- Feeder 2 -->
+			<location unit="M">
+				<x>  4.4940 </x>
+				<y> -10.4939 </y>
+				<z>  -1.0000</z>
+			</location>
+			<priority>1</priority>
+			<capacity unit="LBS"> 250 </capacity>
+			<contents unit="LBS"> 250 </contents>
+			<type> JP-8 </type>
+		</tank>
+
+		<tank type="FUEL" number="2"> <!-- Feeder 3 -->
+			<location unit="M">
+				<x>  4.4940 </x>
+				<y>  10.4939 </y>
+				<z>  -1.0000</z>
+			</location>
+			<priority>1</priority>
+			<capacity unit="LBS"> 250 </capacity>
+			<contents unit="LBS"> 250 </contents>
+			<type> JP-8 </type>
+		</tank>
+
+		<tank type="FUEL" number="3"> <!-- Feeder 4 -->
+			<location unit="M">
+				<x>   6.3951 </x>
+				<y>  17.6897 </y>
+				<z>  -1.0000 </z>
+			</location>
+			<priority>1</priority>
+			<capacity unit="LBS"> 250 </capacity>
+			<contents unit="LBS"> 250 </contents>
+			<type> JP-8 </type>
+		</tank>
+
+		<tank type="FUEL" number="4"> <!-- Left5 -->
 			<location unit="M">
 				<x>   3.00 </x>
 				<y> -27.09 </y>
@@ -722,7 +738,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="1"> <!-- Left2 -->
+		<tank type="FUEL" number="5"> <!-- Left4 -->
 			<location unit="M">
 				<x>   2.00 </x>
 				<y> -20.14 </y>
@@ -734,7 +750,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="2"> <!-- Left3 -->
+		<tank type="FUEL" number="6"> <!-- Left3 -->
 			<location unit="M">
 				<x>   1.00 </x>
 				<y> -15.53 </y>
@@ -746,7 +762,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="3"> <!-- Left4 -->
+		<tank type="FUEL" number="7"> <!-- Left2 -->
 			<location unit="M">
 				<x>   0.00 </x>
 				<y> -11.40 </y>
@@ -758,7 +774,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="4"> <!-- Left5 -->
+		<tank type="FUEL" number="8"> <!-- Left1 -->
 			<location unit="M">
 				<x>  -1.00 </x>
 				<y>  -7.11 </y>
@@ -770,7 +786,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="5"> <!-- Right5 -->
+		<tank type="FUEL" number="9"> <!-- Right1 -->
 			<location unit="M">
 				<x>  -1.00 </x>
 				<y>   7.11 </y>
@@ -782,7 +798,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="6"> <!-- Right4 -->
+		<tank type="FUEL" number="10"> <!-- Right2 -->
 			<location unit="M">
 				<x>   0.00 </x>
 				<y>  11.40 </y>
@@ -794,7 +810,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="7"> <!-- Right3 -->
+		<tank type="FUEL" number="11"> <!-- Right3 -->
 			<location unit="M">
 				<x>   1.00 </x>
 				<y>  15.53 </y>
@@ -806,7 +822,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="8"> <!-- Right2 -->
+		<tank type="FUEL" number="12"> <!-- Right4 -->
 			<location unit="M">
 				<x>   2.00 </x>
 				<y>  20.14 </y>
@@ -818,7 +834,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="9"> <!-- Right1 -->
+		<tank type="FUEL" number="13"> <!-- Right5 -->
 			<location unit="M">
 				<x>   3.00 </x>
 				<y>  27.09 </y>
@@ -830,7 +846,7 @@
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="10"> <!-- Center 1, for refueling -->
+		<tank type="FUEL" number="14"> <!-- Center 1, for refueling -->
 			<location unit="M">
 				<x>  -1.00 </x>
 				<y>  -2.00 </y>
@@ -838,11 +854,11 @@
 			</location>
 			<priority>4</priority>
 			<capacity unit="LBS"> 58048 </capacity>
-			<contents unit="LBS"> 58048 </contents>
+			<contents unit="LBS"> 0 </contents>
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="11"> <!-- Center 2, for refueling -->
+		<tank type="FUEL" number="15"> <!-- Center 2, for refueling -->
 			<location unit="M">
 				<x>  -1.00 </x>
 				<y>   2.00 </y>
@@ -850,11 +866,11 @@
 			</location>
 			<priority>4</priority>
 			<capacity unit="LBS"> 58048 </capacity>
-			<contents unit="LBS"> 58048 </contents>
+			<contents unit="LBS"> 0 </contents>
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="12"> <!-- Center 3, for refueling -->
+		<tank type="FUEL" number="16"> <!-- Center 3, for refueling -->
 			<location unit="M">
 				<x>  -0.50 </x>
 				<y>  -2.00 </y>
@@ -862,11 +878,11 @@
 			</location>
 			<priority>4</priority>
 			<capacity unit="LBS"> 58048 </capacity>
-			<contents unit="LBS"> 58048 </contents>
+			<contents unit="LBS"> 0 </contents>
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="13"> <!-- Center 4, for refueling -->
+		<tank type="FUEL" number="17"> <!-- Center 4, for refueling -->
 			<location unit="M">
 				<x>  -0.50 </x>
 				<y>   2.00 </y>
@@ -874,11 +890,11 @@
 			</location>
 			<priority>4</priority>
 			<capacity unit="LBS"> 58048 </capacity>
-			<contents unit="LBS"> 58048 </contents>
+			<contents unit="LBS"> 0 </contents>
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="14"> <!-- Center 5, for refueling -->
+		<tank type="FUEL" number="18"> <!-- Center 5, for refueling -->
 			<location unit="M">
 				<x>   0.00 </x>
 				<y>  -2.00 </y>
@@ -886,11 +902,11 @@
 			</location>
 			<priority>4</priority>
 			<capacity unit="LBS"> 58048 </capacity>
-			<contents unit="LBS"> 58048 </contents>
+			<contents unit="LBS"> 0 </contents>
 			<type> JP-8 </type>
 		</tank>
 
-		<tank type="FUEL" number="15"> <!-- Center 6, for refueling -->
+		<tank type="FUEL" number="19"> <!-- Center 6, for refueling -->
 			<location unit="M">
 				<x>   0.00 </x>
 				<y>   2.00 </y>
@@ -898,12 +914,13 @@
 			</location>
 			<priority>4</priority>
 			<capacity unit="LBS"> 58048 </capacity>
-			<contents unit="LBS"> 58048 </contents>
+			<contents unit="LBS"> 0 </contents>
 			<type> JP-8 </type>
 		</tank>
 
 	</propulsion>
 
+	<system file="Fuelsystem"/>
 	<system file="TriCycle_PushbackJSBSIM"/>
 
 	<flight_control name="FCS: Ruslan">

@@ -8,8 +8,12 @@
 		<author>Peter Brendt (JWocky) - FDM</author>
 		<author>Andino Gonthaeler - Model taken from the A-124 unter Yasim</author>
 
-		<aircraft-version>V02.00.00</aircraft-version>
-		<status>Development</status>
+		<aircraft-version type="string">V02.00.00</aircraft-version>
+		<aircraft-variant>
+			<aircraft-type type="string">tanker</aircraft-type>
+			<aircraft-subtype type="string">Ruslan-T</aircraft-subtype>
+		</aircraft-variant>
+		<status type="string">Development</status>
 
 		<rating>
 			<FDM type="int">0</FDM>
@@ -350,23 +354,236 @@
 	<!-- fuel tanks and other consumables -->
 	<consumables>
 		<fuel>
-			<tank n="0"><name>Left 5</name></tank>
-			<tank n="1"><name>Left 4</name></tank>
-			<tank n="2"><name>Left 3</name></tank>
-			<tank n="3"><name>Left 2</name></tank>
-			<tank n="4"><name>Left 1</name></tank>
-			<tank n="5"><name>Right 1</name></tank>
-			<tank n="6"><name>Right 2</name></tank>
-			<tank n="7"><name>Right 3</name></tank>
-			<tank n="8"><name>Right 4</name></tank>
-			<tank n="9"><name>Right 5</name></tank>
+			<!--
+				consumables/fuel also includes definitions for the fuel system
+			-->
+			<valves>
+				<!-- cross-feed-valves -->
+				<xfeed type="int">1</xfeed>
+				<xfeed2 type="int">0</xfeed2>
 
-			<tank n="10"><name>Center 1</name></tank>
-			<tank n="11"><name>Center 2</name></tank>
-			<tank n="12"><name>Center 3</name></tank>
-			<tank n="13"><name>Center 4</name></tank>
-			<tank n="14"><name>Center 5</name></tank>
-			<tank n="15"><name>Center 6</name></tank>
+				<!-- refuel-valves -->
+				<refuel type="int">0</refuel>
+				<boom n="0" type="int">0</boom>
+				<probe n="0" type="int">0</probe>
+				<probe n="1" type="int">0</probe>
+				<probe n="2" type="int">0</probe>
+
+				<!-- feeders -->
+				<tank n="0" type="int">1</tank>
+				<tank n="1" type="int">1</tank>
+				<tank n="2" type="int">1</tank>
+				<tank n="3" type="int">1</tank>
+
+				<!-- supply tanks left side-->
+				<tank n="4" type="int">1</tank>
+				<tank n="5" type="int">1</tank>
+				<tank n="6" type="int">1</tank>
+				<tank n="7" type="int">1</tank>
+				<tank n="8" type="int">1</tank>
+
+				<!-- supply tanks right side-->
+				<tank n="9" type="int">1</tank>
+				<tank n="10" type="int">1</tank>
+				<tank n="11" type="int">1</tank>
+				<tank n="12" type="int">1</tank>
+				<tank n="13" type="int">1</tank>
+
+				<!-- center tanks for aar / tanker only-->
+				<tank n="14" type="int">1</tank>
+				<tank n="15" type="int">1</tank>
+				<tank n="16" type="int">1</tank>
+				<tank n="17" type="int">1</tank>
+				<tank n="18" type="int">1</tank>
+				<tank n="19" type="int">1</tank>
+			</valves>
+
+			<tank n="0">
+				<name>Feeder 1</name>
+				<tank-num type="int">0</tank-num>
+				<capacity-lbs type="float"> 250 </capacity-lbs>
+				<capacity-gal_us type="float"> 37.32 </capacity-gal_us>
+				<tank-type type="string">feeder</tank-type>
+				<target-lbs type="float">250.0</target-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[0]/contents-lbs">250.00</level-lbs>
+			</tank>
+
+			<tank n="1">
+				<name>Feeder 2</name>
+				<tank-num type="int">1</tank-num>
+				<capacity-lbs type="float"> 250 </capacity-lbs>
+				<capacity-gal_us type="float"> 37.32 </capacity-gal_us>
+				<tank-type type="string">feeder</tank-type>
+				<target-lbs type="float">250.0</target-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[1]/contents-lbs">250.00</level-lbs>
+			</tank>
+
+			<tank n="2">
+				<name>Feeder 3</name>
+				<tank-num type="int">0</tank-num>
+				<capacity-lbs type="float"> 250 </capacity-lbs>
+				<capacity-gal_us type="float"> 37.32 </capacity-gal_us>
+				<tank-type type="string">feeder</tank-type>
+				<target-lbs type="float">250.0</target-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[2]/contents-lbs">250.00</level-lbs>
+			</tank>
+
+			<tank n="3">
+				<name>Feeder 4</name>
+				<tank-num type="int">0</tank-num>
+				<capacity-lbs type="float"> 250 </capacity-lbs>
+				<capacity-gal_us type="float"> 37.32 </capacity-gal_us>
+				<tank-type type="string">feeder</tank-type>
+				<target-lbs type="float">250.0</target-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[3]/contents-lbs">250.00</level-lbs>
+			</tank>
+
+			<tank n="4">
+				<name>Left 5</name>
+				<capacity-lbs type="float"> 22088 </capacity-lbs>
+				<capacity-gal_us type="float"> 3296.72 </capacity-gal_us>
+				<tank-num type="int">4</tank-num>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[4]/contents-lbs">22088.00</level-lbs>
+			</tank>
+
+			<tank n="5">
+				<name>Left 4</name>
+				<capacity-lbs type="float"> 32088 </capacity-lbs>
+				<capacity-gal_us type="float"> 4789.26 </capacity-gal_us>
+				<tank-num type="int">5</tank-num>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[5]/contents-lbs">32088.00</level-lbs>
+			</tank>
+
+			<tank n="6">
+				<name>Left 3</name>
+				<tank-num type="int">6</tank-num>
+				<capacity-lbs type="float"> 52088 </capacity-lbs>
+				<capacity-gal_us type="float"> 7774.33 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<valve type="int">1</valve>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[6]/contents-lbs">52088.00</level-lbs>
+			</tank>
+
+			<tank n="7">
+				<name>Left 2</name>
+				<tank-num type="int">7</tank-num>
+				<capacity-lbs type="float"> 72088 </capacity-lbs>
+				<capacity-gal_us type="float"> 10759.41 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[7]/contents-lbs">72088.00</level-lbs>
+			</tank>
+
+			<tank n="8">
+				<name>Left 1</name>
+				<tank-num type="int">8</tank-num>
+				<capacity-lbs type="float"> 72088 </capacity-lbs>
+				<capacity-gal_us type="float"> 10759.41 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[8]/contents-lbs">72088.00</level-lbs>
+			</tank>
+
+			<tank n="9">
+				<name>Right 1</name>
+				<tank-num type="int">9</tank-num>
+				<capacity-lbs type="float"> 72088 </capacity-lbs>
+				<capacity-gal_us type="float"> 10759.41 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[9]/contents-lbs">72088.00</level-lbs>
+			</tank>
+
+			<tank n="10">
+				<name>Right 2</name>
+				<tank-num type="int">10</tank-num>
+				<capacity-lbs type="float"> 72088 </capacity-lbs>
+				<capacity-gal_us type="float"> 10759.41 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[10]/contents-lbs">72088.00</level-lbs>
+			</tank>
+
+			<tank n="11">
+				<name>Right 3</name>
+				<tank-num type="int">11</tank-num>
+				<capacity-lbs type="float"> 52088 </capacity-lbs>
+				<capacity-gal_us type="float"> 7774.33 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[11]/contents-lbs">52088.00</level-lbs>
+			</tank>
+
+			<tank n="12">
+				<name>Right 4</name>
+				<tank-num type="int">12</tank-num>
+				<capacity-lbs type="float"> 32088 </capacity-lbs>
+				<capacity-gal_us type="float"> 4789.26 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[12]/contents-lbs">32088.00</level-lbs>
+			</tank>
+
+			<tank n="13">
+				<name>Right 5</name>
+				<tank-num type="int">13</tank-num>
+				<capacity-lbs type="float"> 22088 </capacity-lbs>
+				<capacity-gal_us type="float"> 3296.72 </capacity-gal_us>
+				<tank-type type="string">supply</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[13]/contents-lbs">22088.00</level-lbs>
+			</tank>
+
+			<tank n="14">	<!-- tanker only, refueling tank -->
+				<name>Center 1</name>
+				<tank-num type="int">14</tank-num>
+				<capacity-lbs type="float"> 58048 </capacity-lbs>
+				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<tank-type type="string">refuel</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[14]/contents-lbs">58048.00</level-lbs>
+			</tank>
+
+			<tank n="15">	<!-- tanker only, refueling tank -->
+				<name>Center 2</name>
+				<tank-num type="int">15</tank-num>
+				<capacity-lbs type="float"> 58048 </capacity-lbs>
+				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<tank-type type="string">refuel</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[15]/contents-lbs">58048.00</level-lbs>
+			</tank>
+
+			<tank n="16">	<!-- tanker only, refueling tank -->
+				<name>Center 3</name>
+				<tank-num type="int">16</tank-num>
+				<capacity-lbs type="float"> 58048 </capacity-lbs>
+				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<tank-type type="string">refuel</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[16]/contents-lbs">58048.00</level-lbs>
+			</tank>
+
+			<tank n="17">	<!-- tanker only, refueling tank -->
+				<name>Center 4</name>
+				<tank-num type="int">17</tank-num>
+				<capacity-lbs type="float"> 58048 </capacity-lbs>
+				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<tank-type type="string">refuel</tank-type>
+				<valve type="int">1</valve>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[17]/contents-lbs">58048.00</level-lbs>
+			</tank>
+
+			<tank n="18">	<!-- tanker only, refueling tank -->
+				<name>Center 5</name>
+				<tank-num type="int">18</tank-num>
+				<capacity-lbs type="float"> 58048 </capacity-lbs>
+				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<tank-type type="string">refuel</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[18]/contents-lbs">58048.00</level-lbs>
+			</tank>
+
+			<tank n="19">	<!-- tanker only, refueling tank -->
+				<name>Center 6</name>
+				<tank-num type="int">19</tank-num>
+				<capacity-lbs type="float"> 58048 </capacity-lbs>
+				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<tank-type type="string">refuel</tank-type>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[19]/contents-lbs">58048.00</level-lbs>
+			</tank>
+
 		</fuel>
 	</consumables>
 
@@ -376,6 +593,7 @@
 		<weight n="0">
 			<name>Pilot</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+			<weight-type type="string">crew</weight-type>
 			<min-lb>180</min-lb>
 			<max-lb>250</max-lb>
 		</weight>
@@ -383,6 +601,7 @@
 		<weight n="1">
 			<name>First Officer</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+			<weight-type type="string">crew</weight-type>
 			<min-lb>180</min-lb>
 			<max-lb>250</max-lb>
 		</weight>
@@ -390,6 +609,7 @@
 		<weight n="2">
 			<name>Navigator</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+			<weight-type type="string">crew</weight-type>
 			<min-lb>180</min-lb>
 			<max-lb>250</max-lb>
 		</weight>
@@ -397,6 +617,7 @@
 		<weight n="3">
 			<name>Radio</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+			<weight-type type="string">crew</weight-type>
 			<min-lb>180</min-lb>
 			<max-lb>250</max-lb>
 		</weight>
@@ -404,6 +625,7 @@
 		<weight n="4">
 			<name>Engineers</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
+			<weight-type type="string">crew</weight-type>
 			<min-lb>180</min-lb>
 			<max-lb>500</max-lb>
 		</weight>
@@ -411,6 +633,7 @@
 		<weight n="5">
 			<name>Loadmasters</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]" />
+			<weight-type type="string">crew</weight-type>
 			<min-lb>180</min-lb>
 			<max-lb>750</max-lb>
 		</weight>
@@ -504,7 +727,6 @@
 		</refuel>
 	</systems>
 
-
 	<!-- FDM section if exists -->
 	
 	<limits>
@@ -564,28 +786,81 @@
   
 	<!-- Voodoomaster plane specific initializations -->
 	<voodoomaster>
-		<steering-wheel type="int">0</steering-wheel>
-		<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+		<dialogs>
+			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel Settings</fuel-and-payload>
+		</dialogs>
+		<steering>
+			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+		</steering>
 		<pushback>
+			<steering-wheel type="int">0</steering-wheel>
 			<activated type="bool">false</activated>
 		</pushback>
-		<refuel n="0">
-			<device type="string">RefuelBoom</device>
-			<boom-angle type="float">0.0</boom-angle>
-			<boom-extend type="float">0.0</boom-extend>
-		</refuel>
-		<refuel n="1">
-			<device type="string">RefuelProbe</device>
-			<probe-extended type="bool">false</probe-extended>
-		</refuel>
-		<refuel n="2">
-			<device type="string">RefuelProbe</device>
-			<probe-extended type="bool">false</probe-extended>
-		</refuel>
-		<refuel n="3">
-			<device type="string">RefuelProbe</device>
-			<probe-extended type="bool">false</probe-extended>
-		</refuel>
+		<aar>
+			<refuel n="0">
+				<device type="string">RefuelBoom</device>
+				<boom-angle type="float">0.0</boom-angle>
+				<boom-extend type="float">0.0</boom-extend>
+			</refuel>
+			<refuel n="1">
+				<device type="string">RefuelProbe</device>
+				<probe-extended type="bool">false</probe-extended>
+			</refuel>
+			<refuel n="2">
+				<device type="string">RefuelProbe</device>
+				<probe-extended type="bool">false</probe-extended>
+			</refuel>
+			<refuel n="3">
+				<device type="string">RefuelProbe</device>
+				<probe-extended type="bool">false</probe-extended>
+			</refuel>
+		</aar>
+		<ground-service>
+			<fuel-truck>
+				<truck n="0">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="1">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="2">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="3">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="4">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="5">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+			</fuel-truck>
+		</ground-service>
 	</voodoomaster>
 
 	<!-- instrumentation>
@@ -655,6 +930,9 @@
 			<file>Aircraft/An-124/Nasal/instrumentation.nas</file>
 			<file>Aircraft/Generic/limits.nas</file -->
 		</an-124>
+		<voodoomaster>
+			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Fuel-And-Payload.nas</file>
+		</voodoomaster>
 		<!--dialogs>
 			<file>Aircraft/An-124/Nasal/dialogs.nas</file>
 		</dialogs-->
