@@ -466,8 +466,6 @@
 
 	</ground_reactions>
 
-<system file="NWS"/>
-
 	<propulsion>
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine1 -->
@@ -920,6 +918,7 @@
 
 	</propulsion>
 
+	<system file="NWS"/>
 	<system file="Fuelsystem"/>
 	<system file="TriCycle_PushbackJSBSIM"/>
 
@@ -1083,15 +1082,6 @@
 			<kinematic name="Flaps Control">
 				<input>fcs/flap-cmd-norm</input>
 				<traverse>
-
-		<!-- flaps>
-			<setting>0.000</setting> <! - - 0 deg up - - >
-			<setting>0.200</setting> <! - - 8 deg maneuvering - - >
-			<setting>0.400</setting> <! - - 16 deg intermediate I - - >
-			<setting>0.625</setting> <! - - 25 deg intermediate II - - >
-			<setting>0.800</setting> <! - - 32 deg take off - - >
-			<setting>1.000</setting> <! - - 40 deg landing - - >
-		</flaps -->
 					<setting>
 						<position>  0 </position>
 						<time>      0 </time>

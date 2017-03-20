@@ -1,5 +1,4 @@
 # Overwrite the original menu
-print("overwriting original fuel dialog");
 gui.menuBind("fuel-and-payload", "voodoomaster.WeightFuelDialog()");
 
 var showDialog = func(name) {
@@ -601,55 +600,18 @@ var WeightFuelDialog = func {
 
 			lines=lines+1;
 
-			var title = tcell(weightTable, "text", i+1, 0);
+			var title = tcell(weightTable, "text", lines, 0);
 			title.set("label", wname);
 			title.set("halign", "left");
 
-			if (w.getNode("opt") != nil) {
-				var combo = tcell(weightTable, "combo", lines, 1);
-				combo.set("property", wprop ~ "/selected");
-
-				# Simple code we'd like to use:
-				#foreach(opt; w.getChildren("opt")) {
-				#    var ent = combo.addChild("value");
-				#    ent.prop().setValue(opt.getNode("name", 1).getValue());
-				#}
-	
-				# More complicated workaround to move the "current" item
-				# into the first slot, because dialog.cxx doesn't set the
-				# selected item in the combo box.
-				var opts = [];
-				var curr = w.getNode("selected");
-				curr = curr == nil ? "" : curr.getValue();
-				foreach(opt; w.getChildren("opt")) {
-					append(opts, opt.getNode("name", 1).getValue());
-				}
-	
-				forindex(oi; opts) {
-					if(opts[oi] == curr) {
-						var tmp = opts[0];
-						opts[0] = opts[oi];
-						opts[oi] = tmp;
-						break;
-					}
-				}
-	
-				foreach(opt; opts) {
-					combo.addChild("value").prop().setValue(opt);
-				}
-	
-				combo.setBinding("dialog-apply");
-				combo.setBinding("nasal", "voodoomaster.weightChangeHandler()");
-			} else {
-				var slider = tcell(weightTable, "slider", lines, 1);
-				slider.set("property", wprop ~ "/weight-lb");
-				var min = w.getNode("min-lb", 1).getValue();
-				var max = w.getNode("max-lb", 1).getValue();
-				slider.set("min", min != nil ? min : 0);
-				slider.set("max", max != nil ? max : 100);
-				slider.set("live", 1);
-				slider.setBinding("dialog-apply");
-			}
+			var slider = tcell(weightTable, "slider", lines, 1);
+			slider.set("property", wprop ~ "/weight-lb");
+			var min = w.getNode("min-lb", 1).getValue();
+			var max = w.getNode("max-lb", 1).getValue();
+			slider.set("min", min != nil ? min : 0);
+			slider.set("max", max != nil ? max : 100);
+			slider.set("live", 1);
+			slider.setBinding("dialog-apply");
 
 			var lbs = tcell(weightTable, "text", lines, 2);
 			lbs.set("property", wprop ~ "/weight-lb");
@@ -695,55 +657,18 @@ var WeightFuelDialog = func {
 
 			lines=lines+1;
 
-			var title = tcell(weightTable, "text", i+1, 0);
+			var title = tcell(weightTable, "text", lines, 0);
 			title.set("label", wname);
 			title.set("halign", "left");
 
-			if (w.getNode("opt") != nil) {
-				var combo = tcell(weightTable, "combo", lines, 1);
-				combo.set("property", wprop ~ "/selected");
-
-				# Simple code we'd like to use:
-				#foreach(opt; w.getChildren("opt")) {
-				#    var ent = combo.addChild("value");
-				#    ent.prop().setValue(opt.getNode("name", 1).getValue());
-				#}
-	
-				# More complicated workaround to move the "current" item
-				# into the first slot, because dialog.cxx doesn't set the
-				# selected item in the combo box.
-				var opts = [];
-				var curr = w.getNode("selected");
-				curr = curr == nil ? "" : curr.getValue();
-				foreach(opt; w.getChildren("opt")) {
-					append(opts, opt.getNode("name", 1).getValue());
-				}
-	
-				forindex(oi; opts) {
-					if(opts[oi] == curr) {
-						var tmp = opts[0];
-						opts[0] = opts[oi];
-						opts[oi] = tmp;
-						break;
-					}
-				}
-	
-				foreach(opt; opts) {
-					combo.addChild("value").prop().setValue(opt);
-				}
-	
-				combo.setBinding("dialog-apply");
-				combo.setBinding("nasal", "voodoomaster.weightChangeHandler()");
-			} else {
-				var slider = tcell(weightTable, "slider", lines, 1);
-				slider.set("property", wprop ~ "/weight-lb");
-				var min = w.getNode("min-lb", 1).getValue();
-				var max = w.getNode("max-lb", 1).getValue();
-				slider.set("min", min != nil ? min : 0);
-				slider.set("max", max != nil ? max : 100);
-				slider.set("live", 1);
-				slider.setBinding("dialog-apply");
-			}
+			var slider = tcell(weightTable, "slider", lines, 1);
+			slider.set("property", wprop ~ "/weight-lb");
+			var min = w.getNode("min-lb", 1).getValue();
+			var max = w.getNode("max-lb", 1).getValue();
+			slider.set("min", min != nil ? min : 0);
+			slider.set("max", max != nil ? max : 100);
+			slider.set("live", 1);
+			slider.setBinding("dialog-apply");
 
 			var lbs = tcell(weightTable, "text", lines, 2);
 			lbs.set("property", wprop ~ "/weight-lb");
@@ -790,55 +715,18 @@ var WeightFuelDialog = func {
 
 			lines=lines+1;
 
-			var title = tcell(weightTable, "text", i+1, 0);
+			var title = tcell(weightTable, "text", lines, 0);
 			title.set("label", wname);
 			title.set("halign", "left");
 
-			if (w.getNode("opt") != nil) {
-				var combo = tcell(weightTable, "combo", lines, 1);
-				combo.set("property", wprop ~ "/selected");
-
-				# Simple code we'd like to use:
-				#foreach(opt; w.getChildren("opt")) {
-				#    var ent = combo.addChild("value");
-				#    ent.prop().setValue(opt.getNode("name", 1).getValue());
-				#}
-	
-				# More complicated workaround to move the "current" item
-				# into the first slot, because dialog.cxx doesn't set the
-				# selected item in the combo box.
-				var opts = [];
-				var curr = w.getNode("selected");
-				curr = curr == nil ? "" : curr.getValue();
-				foreach(opt; w.getChildren("opt")) {
-					append(opts, opt.getNode("name", 1).getValue());
-				}
-	
-				forindex(oi; opts) {
-					if(opts[oi] == curr) {
-						var tmp = opts[0];
-						opts[0] = opts[oi];
-						opts[oi] = tmp;
-						break;
-					}
-				}
-	
-				foreach(opt; opts) {
-					combo.addChild("value").prop().setValue(opt);
-				}
-	
-				combo.setBinding("dialog-apply");
-				combo.setBinding("nasal", "voodoomaster.weightChangeHandler()");
-			} else {
-				var slider = tcell(weightTable, "slider", lines, 1);
-				slider.set("property", wprop ~ "/weight-lb");
-				var min = w.getNode("min-lb", 1).getValue();
-				var max = w.getNode("max-lb", 1).getValue();
-				slider.set("min", min != nil ? min : 0);
-				slider.set("max", max != nil ? max : 100);
-				slider.set("live", 1);
-				slider.setBinding("dialog-apply");
-			}
+			var slider = tcell(weightTable, "slider", lines, 1);
+			slider.set("property", wprop ~ "/weight-lb");
+			var min = w.getNode("min-lb", 1).getValue();
+			var max = w.getNode("max-lb", 1).getValue();
+			slider.set("min", min != nil ? min : 0);
+			slider.set("max", max != nil ? max : 100);
+			slider.set("live", 1);
+			slider.setBinding("dialog-apply");
 
 			var lbs = tcell(weightTable, "text", lines, 2);
 			lbs.set("property", wprop ~ "/weight-lb");
@@ -1292,8 +1180,6 @@ var clean_or_refuel = func {
 
 var weights = props.globals.getNode("/payload").getChildren("weight");
 
-print("here we go! "~size(weights));
-
 if (size(weights)>0) {
 	setlistener("/fdm/jsbsim/inertia/pointmass-weight-lbs[0]", func() {
 		var lbs = props.globals.getNode("/fdm/jsbsim/inertia").getValue("pointmass-weight-lbs[0]") or 0;
@@ -1426,4 +1312,3 @@ if (size(weights)>9) {
 
 settimer(generalConversions, 1.0);
 
-WeightFuelDialog();

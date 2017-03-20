@@ -8,7 +8,7 @@
 		<author>Peter Brendt (JWocky) - FDM</author>
 		<author>Andino Gonthaeler - Model taken from the A-124 unter Yasim</author>
 
-		<aircraft-version type="string">V02.00.00</aircraft-version>
+		<aircraft-version type="string">V02.01.00</aircraft-version>
 		<aircraft-variant>
 			<aircraft-type type="string">tanker</aircraft-type>
 			<aircraft-subtype type="string">Ruslan-T</aircraft-subtype>
@@ -690,10 +690,6 @@
 			</engine>
 		</engines>
 
-		<paratroopers>
-			<paratroopers type="int">0</paratroopers>
-		</paratroopers>
-
 		<gear>
 			<brake-parking>1</brake-parking>
 			<tiller-cmd-norm type="double">0</tiller-cmd-norm>
@@ -791,9 +787,9 @@
 		</dialogs>
 		<steering>
 			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+			<steering-wheel type="int">0</steering-wheel>
 		</steering>
 		<pushback>
-			<steering-wheel type="int">0</steering-wheel>
 			<activated type="bool">false</activated>
 		</pushback>
 		<aar>
@@ -931,7 +927,7 @@
 			<file>Aircraft/Generic/limits.nas</file -->
 		</an-124>
 		<voodoomaster>
-			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Fuel-And-Payload.nas</file>
+			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
 		</voodoomaster>
 		<!--dialogs>
 			<file>Aircraft/An-124/Nasal/dialogs.nas</file>
