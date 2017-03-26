@@ -838,6 +838,9 @@
 				</truck>
 			</fuel-truck>
 		</ground-service>
+		<weather>
+			<relative-wind type="float">0.00</relative-wind>
+		</weather>
 	</voodoomaster>
 
 	<!-- instrumentation>

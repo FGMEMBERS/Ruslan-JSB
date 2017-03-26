@@ -16,7 +16,6 @@ setlistener("controls/gear/nosegear-steering-enabled", func() {
 setlistener("/sim/model/start-idling", func(idle) {
 	var run= idle.getBoolValue();
 	if (run) {
-print("called idle");
 		Startup();
 	} else {
 		Shutdown();
@@ -374,4 +373,24 @@ var Shutdown = func{
 	setprop("systems/electrical/volts",0.0);
 }
 
+var weathercontrol=func{
+	var heading=getprop("/orientation/heading-deg");
+	var wind=getprop("/environment/wind-from-heading-deg");
+	var result=(wind-heading);
+print("hdg="~heading);	
+print("wnd="~wind);	
+print("res1="~result);	
+	if (result<0) {
+		result=360+result;
+	}
+print("res2="~result);	
+	if (result>360) {
+		result=result-360;
+	}
+print("res3="~result);	
+	setprop("/voodoomaster/weather/relative-wind", result);
+	settimer(weathercontrol, 2);
+}
+
+settimer(weathercontrol, 2);
 

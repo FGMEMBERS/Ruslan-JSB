@@ -619,24 +619,24 @@
 		<width>10</width>
 		<height>10</height>
 		<input>
-			<property>/autopilot/settings/heading-bug-deg</property>	<!-- must be difference between wind-dir and heading -->
+			<property>/voodoomaster/weather/relative-wind</property>
 			<factor>1.0</factor>
 			<damp>0.3</damp>
 		</input>
-		<format>%n</format>
+		<format></format>
 		<box>false</box>
 		<halign>left</halign>
-		<options>4</options>
+		<options>0</options>
 		<option>notext</option>
-		<justification>0</justification>
-		<blinking>0</blinking>
-		<working>true</working>
-		<latitude>true</latitude>
-		<longitude>true</longitude>
-		<tick-type>line</tick-type>
-		<tick-bottom>true</tick-bottom>
-		<tick-left>true</tick-left>
-		<cap-bottom>true</cap-bottom>
+		<!-- justification>0</justification -->
+		<!-- blinking>0</blinking -->
+		<!-- working>true</working -->
+		<!-- latitude>true</latitude -->
+		<!-- longitude>true</longitude -->
+		<!-- tick-type>line</tick-type -->
+		<!-- tick-bottom>true</tick-bottom -->
+		<!-- tick-left>true</tick-left -->
+		<!-- cap-bottom>true</cap-bottom -->
 		<display-span>0</display-span>
 		<radius>8</radius>
 		<divisions>10</divisions>
