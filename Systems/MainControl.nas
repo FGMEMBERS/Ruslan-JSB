@@ -377,20 +377,78 @@ var weathercontrol=func{
 	var heading=getprop("/orientation/heading-deg");
 	var wind=getprop("/environment/wind-from-heading-deg");
 	var result=(wind-heading);
-print("hdg="~heading);	
-print("wnd="~wind);	
-print("res1="~result);	
 	if (result<0) {
 		result=360+result;
 	}
-print("res2="~result);	
 	if (result>360) {
 		result=result-360;
 	}
-print("res3="~result);	
 	setprop("/voodoomaster/weather/relative-wind", result);
 	settimer(weathercontrol, 2);
 }
 
+var routecontrol=func{
+	if (getprop("/autopilot/route-manager/active")) {
+		# we have an active route, rebuild display
+		var i=0;
+		var o=getprop("/autopilot/route-manager/current-wp")-5;
+		for (i=0; i<11; i=i+1) {
+			if (((i+o)<getprop("/autopilot/route-manager/route/num")) and ((i+o)>=0)) {
+				if ((i+o)==getprop("/autopilot/route-manager/current-wp")) {
+					setprop("/voodoomaster/route/marker["~i~"]", ">");
+				} else {
+					setprop("/voodoomaster/route/marker["~i~"]", " ");
+				}
+				setprop("/voodoomaster/route/number["~i~"]", (i+o));
+				setprop("/voodoomaster/route/code["~i~"]", getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"));
+
+				var name=getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id");
+				var fixes = findFixesByID(getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"));
+				foreach(var fix; fixes){
+					name=fix.id;
+				}
+
+				var navaids = findNavaidsByID(getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"));
+				foreach(var fix; navaids){
+					name=fix.name;
+				}
+
+				if (substr(getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"), 4, 1)=="-") {
+					var airports = findAirportsByICAO(substr(getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"), 0, 4));
+					print("searching for "~getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"));
+					foreach(var fix; airports){
+						name=fix.name~" ("~substr(getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/id"), 5)~")";
+					}
+				}
+				setprop("/voodoomaster/route/title["~i~"]", name);
+				setprop("/voodoomaster/route/bearing["~i~"]", getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/leg-bearing-true-deg"));
+				setprop("/voodoomaster/route/distance["~i~"]", getprop("/autopilot/route-manager/route/wp["~(i+o)~"]/leg-distance-nm"));
+			} else {
+				setprop("/voodoomaster/route/marker["~i~"]", "INVALID");
+				setprop("/voodoomaster/route/number["~i~"]", 0);
+				setprop("/voodoomaster/route/code["~i~"]", "");
+				setprop("/voodoomaster/route/title["~i~"]", "");
+				setprop("/voodoomaster/route/bearing["~i~"]", 0.0);
+				setprop("/voodoomaster/route/distance["~i~"]", 0.0);
+			}
+		}
+	} else {
+		# we have no active route, clear display
+		var i=0;
+		for (i=0; i<11; i=i+1) {
+			setprop("/voodoomaster/route/marker["~i~"]", "INVALID");
+			setprop("/voodoomaster/route/number["~i~"]", 0);
+			setprop("/voodoomaster/route/code["~i~"]", "");
+			setprop("/voodoomaster/route/title["~i~"]", "");
+			setprop("/voodoomaster/route/bearing["~i~"]", 0.0);
+			setprop("/voodoomaster/route/distance["~i~"]", 0.0);
+		}
+	}
+}
+
 settimer(weathercontrol, 2);
+setlistener("/autopilot/route-manager/active", routecontrol);
+setlistener("/autopilot/route-manager/current-wp", routecontrol);
+setlistener("/autopilot/route-manager/route/num", routecontrol);
+
 

@@ -1,6 +1,4 @@
 togglereverser = func(eng) {
-print("eng="~eng);
-print("prop="~"engines/engine["~eng~"].throttle");
 	if (getprop("controls/engines/engine["~eng~"]/throttle")<0.1) {
 		if (getprop("engines/engine["~eng~"]/reverser")) {
 			setprop("fdm/jsbsim/propulsion/engine["~eng~"]/reverser-angle-rad", 3.14);
