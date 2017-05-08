@@ -1072,6 +1072,7 @@
 		</channel>
 
 		<channel name="Landing Gear">
+
 			<kinematic name="Gear Control">
 				<input>gear/gear-cmd-norm</input>
 				<traverse>

@@ -517,7 +517,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-Aileron-B</object-name>
 		<object-name>R-Aileron-C</object-name>
 		<property>surface-positions/right-aileron-pos-norm</property>
-		<factor>25</factor>
+		<factor>-25</factor>
 		<center>
 			<x-m>14.49</x-m>
 			<y-m>30.95</y-m>
@@ -2010,6 +2010,8 @@ An-124 Ruslan model configuration file
 	<!-- Main Gear Left -->
 	<!-- Left 1 -->
 	<!-- Select/Deslect u/c and doors -->
+
+	<!-- MP transfers only the first 7 or 8 gears, so all hang on #2 now #### -->
 	<animation>
 		<type>select</type>
 		<object-name>L-MG-1-IS-Tyre</object-name>
@@ -2290,7 +2292,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[3]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2301,7 +2303,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[3]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -2315,7 +2317,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-IS-Hub</object-name>
 		<object-name>L-MG-2-OS-Hub</object-name>
 		<object-name>L-MG-2-Strut</object-name>
-		<property>gear/gear[3]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -2339,7 +2341,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-IS-Hub</object-name>
 		<object-name>L-MG-2-OS-Hub</object-name>
 		<object-name>L-MG-2-Strut</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2374,7 +2376,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-IS-Hub</object-name>
 		<object-name>L-MG-2-OS-Hub</object-name>
 		<object-name>L-MG-2-Strut</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2409,7 +2411,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-IS-Hub</object-name>
 		<object-name>L-MG-2-OS-Hub</object-name>
 		<object-name>L-MG-2-Strut</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2441,7 +2443,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>L-MG-2-UDoor</object-name>
 		<object-name>L-MG-2-LDoor</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2471,7 +2473,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-MG-2-LDoor</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2506,7 +2508,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-2-IS-Hub</object-name>
 		<object-name>L-MG-2-OS-Hub</object-name>
 		<object-name>L-MG-2-Strut</object-name>
-		<property>gear/gear[3]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -2555,7 +2557,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[4]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2566,7 +2568,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[4]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -2580,7 +2582,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-IS-Hub</object-name>
 		<object-name>L-MG-3-OS-Hub</object-name>
 		<object-name>L-MG-3-Strut</object-name>
-		<property>gear/gear[4]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -2604,7 +2606,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-IS-Hub</object-name>
 		<object-name>L-MG-3-OS-Hub</object-name>
 		<object-name>L-MG-3-Strut</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2639,7 +2641,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-IS-Hub</object-name>
 		<object-name>L-MG-3-OS-Hub</object-name>
 		<object-name>L-MG-3-Strut</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2674,7 +2676,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-IS-Hub</object-name>
 		<object-name>L-MG-3-OS-Hub</object-name>
 		<object-name>L-MG-3-Strut</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2706,7 +2708,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>L-MG-3-UDoor</object-name>
 		<object-name>L-MG-3-LDoor</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2736,7 +2738,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-MG-3-LDoor</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2771,7 +2773,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-3-IS-Hub</object-name>
 		<object-name>L-MG-3-OS-Hub</object-name>
 		<object-name>L-MG-3-Strut</object-name>
-		<property>gear/gear[4]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -2790,10 +2792,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[4]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[4]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>6.47</x-m>
@@ -2820,7 +2822,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[5]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -2831,7 +2833,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[5]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -2845,7 +2847,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-IS-Hub</object-name>
 		<object-name>L-MG-4-OS-Hub</object-name>
 		<object-name>L-MG-4-Strut</object-name>
-		<property>gear/gear[5]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -2869,7 +2871,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-IS-Hub</object-name>
 		<object-name>L-MG-4-OS-Hub</object-name>
 		<object-name>L-MG-4-Strut</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2904,7 +2906,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-IS-Hub</object-name>
 		<object-name>L-MG-4-OS-Hub</object-name>
 		<object-name>L-MG-4-Strut</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2939,7 +2941,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-IS-Hub</object-name>
 		<object-name>L-MG-4-OS-Hub</object-name>
 		<object-name>L-MG-4-Strut</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -2971,7 +2973,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>L-MG-4-UDoor</object-name>
 		<object-name>L-MG-4-LDoor</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3001,7 +3003,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-MG-4-LDoor</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3036,7 +3038,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-4-IS-Hub</object-name>
 		<object-name>L-MG-4-OS-Hub</object-name>
 		<object-name>L-MG-4-Strut</object-name>
-		<property>gear/gear[5]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -3055,10 +3057,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[5]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[5]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>8.08</x-m>
@@ -3085,7 +3087,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[6]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -3096,7 +3098,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[6]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -3110,7 +3112,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-IS-Hub</object-name>
 		<object-name>L-MG-5-OS-Hub</object-name>
 		<object-name>L-MG-5-Strut</object-name>
-		<property>gear/gear[6]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -3133,7 +3135,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-IS-Hub</object-name>
 		<object-name>L-MG-5-OS-Hub</object-name>
 		<object-name>L-MG-5-Strut</object-name>
-		<property>gear/gear[6]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3168,7 +3170,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-IS-Hub</object-name>
 		<object-name>L-MG-5-OS-Hub</object-name>
 		<object-name>L-MG-5-Strut</object-name>
-		<property>gear/gear[6]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3203,7 +3205,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-IS-Hub</object-name>
 		<object-name>L-MG-5-OS-Hub</object-name>
 		<object-name>L-MG-5-Strut</object-name>
-		<property>gear/gear[6]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3235,7 +3237,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>L-MG-5-UDoor</object-name>
 		<object-name>L-MG-5-LDoor</object-name>
-		<property>gear/gear[6]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3265,7 +3267,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-MG-5-LDoor</object-name>
-		<property>gear/gear[6]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3300,7 +3302,7 @@ An-124 Ruslan model configuration file
 		<object-name>L-MG-5-IS-Hub</object-name>
 		<object-name>L-MG-5-OS-Hub</object-name>
 		<object-name>L-MG-5-Strut</object-name>
-		<property>gear/gear[6]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -3322,7 +3324,7 @@ An-124 Ruslan model configuration file
 				<property>gear/gear[6]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[6]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>9.80</x-m>
@@ -3352,7 +3354,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[7]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -3364,7 +3366,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-CDoor.001</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[7]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -3378,7 +3380,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-IS-Hub</object-name>
 		<object-name>R-MG-1-OS-Hub</object-name>
 		<object-name>R-MG-1-Strut</object-name>
-		<property>gear/gear[7]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -3402,7 +3404,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-IS-Hub</object-name>
 		<object-name>R-MG-1-OS-Hub</object-name>
 		<object-name>R-MG-1-Strut</object-name>
-		<property>gear/gear[7]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3437,7 +3439,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-IS-Hub</object-name>
 		<object-name>R-MG-1-OS-Hub</object-name>
 		<object-name>R-MG-1-Strut</object-name>
-		<property>gear/gear[7]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3472,7 +3474,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-IS-Hub</object-name>
 		<object-name>R-MG-1-OS-Hub</object-name>
 		<object-name>R-MG-1-Strut</object-name>
-		<property>gear/gear[7]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3506,7 +3508,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-LDoor</object-name>
 		<object-name>R-MG-1-UDoor.001</object-name>
 		<object-name>R-MG-1-LDoor.001</object-name>
-		<property>gear/gear[7]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3537,7 +3539,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>R-MG-1-LDoor</object-name>
 		<object-name>R-MG-1-LDoor.001</object-name>
-		<property>gear/gear[7]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3572,7 +3574,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-1-IS-Hub</object-name>
 		<object-name>R-MG-1-OS-Hub</object-name>
 		<object-name>R-MG-1-Strut</object-name>
-		<property>gear/gear[7]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -3591,10 +3593,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[7]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[7]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>3.16</x-m>
@@ -3621,7 +3623,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[8]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -3632,7 +3634,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[8]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -3646,7 +3648,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-IS-Hub</object-name>
 		<object-name>R-MG-2-OS-Hub</object-name>
 		<object-name>R-MG-2-Strut</object-name>
-		<property>gear/gear[8]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -3670,7 +3672,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-IS-Hub</object-name>
 		<object-name>R-MG-2-OS-Hub</object-name>
 		<object-name>R-MG-2-Strut</object-name>
-		<property>gear/gear[8]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3705,7 +3707,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-IS-Hub</object-name>
 		<object-name>R-MG-2-OS-Hub</object-name>
 		<object-name>R-MG-2-Strut</object-name>
-		<property>gear/gear[8]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3740,7 +3742,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-IS-Hub</object-name>
 		<object-name>R-MG-2-OS-Hub</object-name>
 		<object-name>R-MG-2-Strut</object-name>
-		<property>gear/gear[8]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3772,7 +3774,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>R-MG-2-UDoor</object-name>
 		<object-name>R-MG-2-LDoor</object-name>
-		<property>gear/gear[8]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3802,7 +3804,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-MG-2-LDoor</object-name>
-		<property>gear/gear[8]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3837,7 +3839,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-2-IS-Hub</object-name>
 		<object-name>R-MG-2-OS-Hub</object-name>
 		<object-name>R-MG-2-Strut</object-name>
-		<property>gear/gear[8]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -3856,10 +3858,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[8]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[8]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>4.81</x-m>
@@ -3886,7 +3888,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[9]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -3897,7 +3899,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[9]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -3911,7 +3913,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-IS-Hub</object-name>
 		<object-name>R-MG-3-OS-Hub</object-name>
 		<object-name>R-MG-3-Strut</object-name>
-		<property>gear/gear[9]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -3934,7 +3936,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-IS-Hub</object-name>
 		<object-name>R-MG-3-OS-Hub</object-name>
 		<object-name>R-MG-3-Strut</object-name>
-		<property>gear/gear[9]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -3969,7 +3971,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-IS-Hub</object-name>
 		<object-name>R-MG-3-OS-Hub</object-name>
 		<object-name>R-MG-3-Strut</object-name>
-		<property>gear/gear[9]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4004,7 +4006,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-IS-Hub</object-name>
 		<object-name>R-MG-3-OS-Hub</object-name>
 		<object-name>R-MG-3-Strut</object-name>
-		<property>gear/gear[9]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4036,7 +4038,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>R-MG-3-UDoor</object-name>
 		<object-name>R-MG-3-LDoor</object-name>
-		<property>gear/gear[9]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4066,7 +4068,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-MG-3-LDoor</object-name>
-		<property>gear/gear[9]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4101,7 +4103,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-3-IS-Hub</object-name>
 		<object-name>R-MG-3-OS-Hub</object-name>
 		<object-name>R-MG-3-Strut</object-name>
-		<property>gear/gear[9]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -4120,10 +4122,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[9]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[9]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>6.47</x-m>
@@ -4150,7 +4152,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[10]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -4161,7 +4163,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[10]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -4175,7 +4177,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-IS-Hub</object-name>
 		<object-name>R-MG-4-OS-Hub</object-name>
 		<object-name>R-MG-4-Strut</object-name>
-		<property>gear/gear[10]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -4199,7 +4201,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-IS-Hub</object-name>
 		<object-name>R-MG-4-OS-Hub</object-name>
 		<object-name>R-MG-4-Strut</object-name>
-		<property>gear/gear[10]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4234,7 +4236,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-IS-Hub</object-name>
 		<object-name>R-MG-4-OS-Hub</object-name>
 		<object-name>R-MG-4-Strut</object-name>
-		<property>gear/gear[10]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4269,7 +4271,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-IS-Hub</object-name>
 		<object-name>R-MG-4-OS-Hub</object-name>
 		<object-name>R-MG-4-Strut</object-name>
-		<property>gear/gear[10]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4301,7 +4303,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>R-MG-4-UDoor</object-name>
 		<object-name>R-MG-4-LDoor</object-name>
-		<property>gear/gear[10]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4331,7 +4333,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-MG-4-LDoor</object-name>
-		<property>gear/gear[10]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4366,7 +4368,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-4-IS-Hub</object-name>
 		<object-name>R-MG-4-OS-Hub</object-name>
 		<object-name>R-MG-4-Strut</object-name>
-		<property>gear/gear[10]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -4385,10 +4387,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[10]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[10]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>8.08</x-m>
@@ -4415,7 +4417,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-LDoor</object-name>
 		<condition>
 			<greater-than>
-				<property>gear/gear[11]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</greater-than>
 		</condition>
@@ -4426,7 +4428,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-CDoor</object-name>
 		<condition>
 			<equals>
-				<property>gear/gear[11]/position-norm</property>
+				<property>gear/gear[2]/position-norm</property>
 				<value>0.0</value>
 			</equals>
 		</condition>
@@ -4440,7 +4442,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-IS-Hub</object-name>
 		<object-name>R-MG-5-OS-Hub</object-name>
 		<object-name>R-MG-5-Strut</object-name>
-		<property>gear/gear[11]/steering-norm</property>
+		<property>gear/gear[2]/steering-norm</property>
 		<offset-deg>0</offset-deg>
 		<factor>10.00</factor>
 		<center>
@@ -4463,7 +4465,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-IS-Hub</object-name>
 		<object-name>R-MG-5-OS-Hub</object-name>
 		<object-name>R-MG-5-Strut</object-name>
-		<property>gear/gear[11]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4498,7 +4500,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-IS-Hub</object-name>
 		<object-name>R-MG-5-OS-Hub</object-name>
 		<object-name>R-MG-5-Strut</object-name>
-		<property>gear/gear[11]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4533,7 +4535,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-IS-Hub</object-name>
 		<object-name>R-MG-5-OS-Hub</object-name>
 		<object-name>R-MG-5-Strut</object-name>
-		<property>gear/gear[11]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4565,7 +4567,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>R-MG-5-UDoor</object-name>
 		<object-name>R-MG-5-LDoor</object-name>
-		<property>gear/gear[11]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4595,7 +4597,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-MG-5-LDoor</object-name>
-		<property>gear/gear[11]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -4630,7 +4632,7 @@ An-124 Ruslan model configuration file
 		<object-name>R-MG-5-IS-Hub</object-name>
 		<object-name>R-MG-5-OS-Hub</object-name>
 		<object-name>R-MG-5-Strut</object-name>
-		<property>gear/gear[11]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
@@ -4649,10 +4651,10 @@ An-124 Ruslan model configuration file
 					<property>position/altitude-agl-ft</property>
 					<value>50.0</value>
 				</less-than>
-				<property>gear/gear[11]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</condition>
-		<property>gear/gear[11]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>30.0</factor>
 		<center>
 			<x-m>9.80</x-m>
