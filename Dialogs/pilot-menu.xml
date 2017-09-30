@@ -31,6 +31,16 @@
 			</item>
 
 			<item>
+				<label>System Settings</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var settings_dialog = voodoomaster.SettingsDialog.new();
+					</script>
+				</binding>
+			</item>
+
+			<item>
 				<label>NWS ON</label>
 				<binding>
 					<command>property-assign</command>

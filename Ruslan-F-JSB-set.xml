@@ -61,10 +61,10 @@
 			<fuel>false</fuel>	<!-- false is default -->
 		</freeze>
 
-		<!-- speed in kts for SYS7/8/9 APs -->
 		<gui>
 			<dialogs>
 				<autopilot>
+					<!-- speed in kts for SYS7/8/9 APs -->
 					<kts-select type="bool">true</kts-select>
 					<mach-select tpye="bool">false</mach-select>
 				</autopilot>
@@ -175,7 +175,7 @@
 			</electrical>
 
 			<autopilot>
-				<path>Aircraft/Ruslan-JSB/Systems/SYS9_1_autopilot.xml</path>
+				<path>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Autopilot/SYS9_1_autopilot.xml</path>
 			</autopilot>
 
 			<!-- path>Aircraft/Ruslan-JSB/Systems/Systems.xml</path -->
@@ -853,8 +853,30 @@
 	<!-- Voodoomaster plane specific initializations -->
 	<voodoomaster>
 		<dialogs>
-			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel Settings</fuel-and-payload>
+			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel</fuel-and-payload>
+			<system-settings type="string">Antonov An-124 System Settings</system-settings>
 		</dialogs>
+		<settings>
+			<setting>
+				<name type="string">Engines</name>
+				<current type="int">1</current>
+				<property type="string">/voodoomaster/engines/engine-set</property>
+				<options>
+					<opt n="0" type="string">Ivchenko D-18T</opt>
+					<opt n="1" type="string">Alliance GP7277</opt>
+				</options>
+			</setting>
+			<setting>
+				<name type="string">Cockpit</name>
+				<current type="int">2</current>
+				<property type="string">/voodoomaster/cockpit/style</property>
+				<options>
+					<opt n="0" type="string">Original</opt>
+					<opt n="1" type="string">Generic Classic</opt>
+					<opt n="2" type="string">Experimental</opt>
+				</options>
+			</setting>
+		</settings>
 		<steering>
 			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
 			<steering-wheel type="int">0</steering-wheel>
@@ -1060,6 +1082,7 @@
 		</an-124>
 		<voodoomaster>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
+			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Settings/Settings.nas</file>
 		</voodoomaster>
 		<!--dialogs>
 			<file>Aircraft/An-124/Nasal/dialogs.nas</file>

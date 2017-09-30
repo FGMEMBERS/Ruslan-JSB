@@ -5,7 +5,7 @@ togglereverser = func(eng) {
 			setprop("engines/engine["~eng~"]/reverser_pos_morm", 1.00);
 		} else {
 			setprop("fdm/jsbsim/propulsion/engine["~eng~"]/reverser-angle-rad", 0.00);
-			setprop("engines/engine["~eng~"]/reverser_pos_morm", 0.00);
+			setprop("engines/engine["~eng~"]/reverser_pos_norm", 0.00);
 		}
 	}
 }

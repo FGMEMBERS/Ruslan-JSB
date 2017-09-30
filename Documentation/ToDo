@@ -1,8 +1,9 @@
 - New fuel system has as of yet no balancing function
-- New fule system: Fuel dump function
+- New fuel system: Fuel dump function
 - New fuel system: Active pumps to reverse flows?
+- New Fuel system, integrate tanker tanks in both directions?
 - Freighter: More detailed load points?
-- People weight problem: American people are generally calculated with 200lbs, Western European with 200lbs and Eastern Europeans (and 707 passengers) only with 180lbs. 
+- People weight problem: American people are generally calculated with 220lbs, Western European with 200lbs and Eastern Europeans (and 707 passengers) only with 180lbs. 
 - Electrical system needs rewriting
 - Systems need to be adapted to new electrical system
 - lights
@@ -18,5 +19,5 @@
 - Systems: Multistation Warning System
 - HUD: Customize? MSWS integration
 - HUD: in tanker
-- Wheels: Not all wheels showing in MP?
-- Autostart seems to show only three engines (though, all four of the engine set are started)
+- problems with livery on wings?
+- AP overclimbs and loses too much speed in Alt Hold mode
