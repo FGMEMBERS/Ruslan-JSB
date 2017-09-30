@@ -72,6 +72,72 @@
 		</gui>
 
 		<!-- HUD section, if exists -->
+
+		<!-- HUD section -->
+		<hud>
+			<enable3d>false</enable3d>
+			<path n="1">Aircraft/Ruslan-JSB/Voodoomaster/Systems/HUD/hud.xml</path>
+			<visibility n="1">false</visibility>
+			<palette>
+				<color n="0">
+					<alpha type="float">0.85</alpha>
+					<antialiased type="bool">true</antialiased>
+					<brightness type="float">0.85</brightness>
+					<transparent type="bool">true</transparent>
+					<red type="float">0.38</red>
+					<green type="float">1.0</green>
+					<blue type="float">0.22</blue>
+				</color>
+	
+				<color n="1">
+					<alpha type="float">0.85</alpha>
+					<antialiased type="bool">true</antialiased>
+					<brightness type="float">0.85</brightness>
+					<transparent type="bool">true</transparent>
+					<red type="float">1.0</red>
+					<green type="float">0.2</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="2">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">1.0</red>
+					<green type="float">0.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="3">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.0</red>
+					<green type="float">1.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="4">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.1</red>
+					<green type="float">0.1</green>
+					<blue type="float">1.0</blue>
+				</color>
+
+			</palette>
+ 
+			<clipping>
+				<left type="double">-300</left>
+				<top type="double">250</top>
+				<right type="double">300</right>
+				<bottom type="double">-275</bottom>
+			</clipping>
+		</hud>
 		  
 		<!-- Blackout rendering due to G-forces -->
 		<!-- rendering>
@@ -134,7 +200,7 @@
 		<chase-distance-m type="double" archive="y">-100.0</chase-distance-m>
 
 		<view n="0">
-			<name>Cockpit</name>
+			<name>Captain</name>
 			<type>lookfrom</type>
 			<internal type="bool">true</internal>
 			<config>
@@ -142,13 +208,15 @@
 				<x-offset-m archive="y" type="double">-0.49</x-offset-m>
 				<y-offset-m archive="y" type="double">4.70</y-offset-m>
 				<z-offset-m archive="y" type="double">-18.49</z-offset-m>
-				<pitch-offset-deg>-14</pitch-offset-deg>
+				<pitch-offset-deg>0</pitch-offset-deg>
 				<default-field-of-view-deg type="double">62</default-field-of-view-deg>
 				<limits>
 					<enabled type="bool">false</enabled>
 				</limits>
 			</config>
 		</view>
+
+
 
 		<view n="1"> <!-- Helicopter view -->
 			<config>
@@ -190,6 +258,91 @@
 		</view>
 
 		<view n="101">
+			<name>First Officer</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<enabled type="bool">true</enabled>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">true</from-model-idx>
+				<!-- x/y/z == right/up/back -->
+				<x-offset-m archive="y" type="double">0.49</x-offset-m>
+				<y-offset-m archive="y" type="double">4.70</y-offset-m>
+				<z-offset-m archive="y" type="double">-18.49</z-offset-m>
+				<pitch-offset-deg>-0</pitch-offset-deg>
+				<default-field-of-view-deg type="double">62</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="102">
+			<name>Navigator</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<enabled type="bool">true</enabled>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">true</from-model-idx>
+				<!-- x/y/z == right/up/back -->
+				<x-offset-m archive="y" type="double">-0.49</x-offset-m>
+				<y-offset-m archive="y" type="double">4.70</y-offset-m>
+				<z-offset-m archive="y" type="double">-17.49</z-offset-m>
+				<pitch-offset-deg>-0</pitch-offset-deg>
+				<default-field-of-view-deg type="double">62</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="103">
+			<name>Radio</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<enabled type="bool">true</enabled>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">true</from-model-idx>
+				<!-- x/y/z == right/up/back -->
+				<x-offset-m archive="y" type="double">-0.49</x-offset-m>
+				<y-offset-m archive="y" type="double">4.70</y-offset-m>
+				<z-offset-m archive="y" type="double">-17.49</z-offset-m>
+				<pitch-offset-deg>-0</pitch-offset-deg>
+				<default-field-of-view-deg type="double">62</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="104">
+			<name>Engineer</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<enabled type="bool">true</enabled>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">true</from-model-idx>
+				<!-- x/y/z == right/up/back -->
+				<x-offset-m archive="y" type="double">0.49</x-offset-m>
+				<y-offset-m archive="y" type="double">4.70</y-offset-m>
+				<z-offset-m archive="y" type="double">-17.49</z-offset-m>
+				<pitch-offset-deg>-0</pitch-offset-deg>
+				<default-field-of-view-deg type="double">62</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="105">
+			<name>Loadmaster</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<enabled type="bool">true</enabled>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">true</from-model-idx>
+				<!-- x/y/z == right/up/back -->
+				<x-offset-m archive="y" type="double">0.49</x-offset-m>
+				<y-offset-m archive="y" type="double">4.70</y-offset-m>
+				<z-offset-m archive="y" type="double">-17.49</z-offset-m>
+				<pitch-offset-deg>-0</pitch-offset-deg>
+				<default-field-of-view-deg type="double">62</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="110">
 			<name>Cargo Bay View</name>
 			<!-- x/y/z == right/up/back -->
 			<enabled type="bool">true</enabled>
@@ -205,23 +358,6 @@
 				<pitch-offset-deg archive="y">-12.0</pitch-offset-deg>
 				<default-pitch-deg type="double">-12.0</default-pitch-deg>
 				<default-field-of-view-deg type="double">65</default-field-of-view-deg>
-			</config>
-		</view>
-
-		<view n="102">
-			<name>Copilot View</name>
-			<enabled type="bool">true</enabled>
-			<type>lookfrom</type>
-			<internal type="bool">true</internal>
-			<config>
-				<from-model type="bool">true</from-model>
-				<from-model-idx type="int">true</from-model-idx>
-				<!-- x/y/z == right/up/back -->
-				<x-offset-m archive="y" type="double">0.44</x-offset-m>
-				<y-offset-m archive="y" type="double">4.70</y-offset-m>
-				<z-offset-m archive="y" type="double">-18.49</z-offset-m>
-				<pitch-offset-deg>-0</pitch-offset-deg>
-				<default-field-of-view-deg type="double">70</default-field-of-view-deg>
 			</config>
 		</view>
 
@@ -783,8 +919,30 @@
 	<!-- Voodoomaster plane specific initializations -->
 	<voodoomaster>
 		<dialogs>
-			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel Settings</fuel-and-payload>
+			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel</fuel-and-payload>
+			<system-settings type="string">Antonov An-124 System Settings</system-settings>
 		</dialogs>
+		<settings>
+			<setting>
+				<name type="string">Engines</name>
+				<current type="int">1</current>
+				<property type="string">/voodoomaster/engines/engine-set</property>
+				<options>
+					<opt n="0" type="string">Ivchenko D-18T</opt>
+					<opt n="1" type="string">Alliance GP7277</opt>
+				</options>
+			</setting>
+			<setting>
+				<name type="string">Cockpit</name>
+				<current type="int">2</current>
+				<property type="string">/voodoomaster/cockpit/style</property>
+				<options>
+					<opt n="0" type="string">Original</opt>
+					<opt n="1" type="string">Generic Classic</opt>
+					<opt n="2" type="string">Experimental</opt>
+				</options>
+			</setting>
+		</settings>
 		<steering>
 			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
 			<steering-wheel type="int">0</steering-wheel>
@@ -792,25 +950,6 @@
 		<pushback>
 			<activated type="bool">false</activated>
 		</pushback>
-		<aar>
-			<refuel n="0">
-				<device type="string">RefuelBoom</device>
-				<boom-angle type="float">0.0</boom-angle>
-				<boom-extend type="float">0.0</boom-extend>
-			</refuel>
-			<refuel n="1">
-				<device type="string">RefuelProbe</device>
-				<probe-extended type="bool">false</probe-extended>
-			</refuel>
-			<refuel n="2">
-				<device type="string">RefuelProbe</device>
-				<probe-extended type="bool">false</probe-extended>
-			</refuel>
-			<refuel n="3">
-				<device type="string">RefuelProbe</device>
-				<probe-extended type="bool">false</probe-extended>
-			</refuel>
-		</aar>
 		<ground-service>
 			<fuel-truck>
 				<truck n="0">
@@ -857,6 +996,90 @@
 				</truck>
 			</fuel-truck>
 		</ground-service>
+		<weather>
+			<relative-wind type="float">0.00</relative-wind>
+		</weather>
+		<hud>
+			<mode type="int">0</mode>
+		</hud>
+		<route>
+			<marker n="0" type="string"></marker>
+			<number n="0" type="int"></number>
+			<code n="0" type="string"></code>
+			<title n="0" type="string"></title>
+			<bearing n="0" type="float"></bearing>
+			<distance n="0" type="float"></distance>
+
+			<marker n="1" type="string"></marker>
+			<number n="1" type="int"></number>
+			<code n="1" type="string"></code>
+			<title n="1" type="string"></title>
+			<bearing n="1" type="float"></bearing>
+			<distance n="1" type="float"></distance>
+
+			<marker n="2" type="string"></marker>
+			<number n="2" type="int"></number>
+			<code n="2" type="string"></code>
+			<title n="2" type="string"></title>
+			<bearing n="2" type="float"></bearing>
+			<distance n="2" type="float"></distance>
+
+			<marker n="3" type="string"></marker>
+			<number n="3" type="int"></number>
+			<code n="3" type="string"></code>
+			<title n="3" type="string"></title>
+			<bearing n="3" type="float"></bearing>
+			<distance n="3" type="float"></distance>
+
+			<marker n="4" type="string"></marker>
+			<number n="4" type="int"></number>
+			<code n="4" type="string"></code>
+			<title n="4" type="string"></title>
+			<bearing n="4" type="float"></bearing>
+			<distance n="4" type="float"></distance>
+
+			<marker n="5" type="string"></marker>
+			<number n="5" type="int"></number>
+			<code n="5" type="string"></code>
+			<title n="5" type="string"></title>
+			<bearing n="5" type="float"></bearing>
+			<distance n="5" type="float"></distance>
+
+			<marker n="6" type="string"></marker>
+			<number n="6" type="int"></number>
+			<code n="6" type="string"></code>
+			<title n="6" type="string"></title>
+			<bearing n="6" type="float"></bearing>
+			<distance n="6" type="float"></distance>
+
+			<marker n="7" type="string"></marker>
+			<number n="7" type="int"></number>
+			<code n="7" type="string"></code>
+			<title n="7" type="string"></title>
+			<bearing n="7" type="float"></bearing>
+			<distance n="7" type="float"></distance>
+
+			<marker n="8" type="string"></marker>
+			<number n="8" type="int"></number>
+			<code n="8" type="string"></code>
+			<title n="8" type="string"></title>
+			<bearing n="8" type="float"></bearing>
+			<distance n="8" type="float"></distance>
+
+			<marker n="9" type="string"></marker>
+			<number n="9" type="int"></number>
+			<code n="9" type="string"></code>
+			<title n="9" type="string"></title>
+			<bearing n="9" type="float"></bearing>
+			<distance n="9" type="float"></distance>
+
+			<marker n="10" type="string"></marker>
+			<number n="10" type="int"></number>
+			<code n="10" type="string"></code>
+			<title n="10" type="string"></title>
+			<bearing n="10" type="float"></bearing>
+			<distance n="10" type="float"></distance>
+		</route>
 	</voodoomaster>
 
 	<!-- instrumentation>

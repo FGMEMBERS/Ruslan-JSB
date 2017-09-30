@@ -933,6 +933,9 @@
 		<weather>
 			<relative-wind type="float">0.00</relative-wind>
 		</weather>
+		<hud>
+			<mode type="int">0</mode>
+		</hud>
 		<route>
 			<marker n="0" type="string"></marker>
 			<number n="0" type="int"></number>

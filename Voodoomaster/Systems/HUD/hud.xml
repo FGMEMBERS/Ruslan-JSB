@@ -3,6 +3,54 @@
 <PropertyList>
 
 	<label>
+		<name>CAPTAIN_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-100</x>
+		<y>80</y>
+		<format>CAPTAIN</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>FIRST_OFFICER_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-100</x>
+		<y>80</y>
+		<format>FIRST OFFICER</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>NAVIGATOR_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-180</x>
+		<y>80</y>
+		<format>NAVIGATOR</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
 		<name>G Load</name>
 		<width>1</width>
 		<height>1</height>
@@ -17,8 +65,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -38,8 +86,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -59,8 +107,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -96,8 +144,8 @@
 		<tick-length>fixed</tick-length>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</tape>
@@ -133,8 +181,8 @@
 		<tick-length>fixed</tick-length>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</tape>
@@ -170,8 +218,8 @@
 		<tick-length>fixed</tick-length>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</tape>
@@ -185,8 +233,8 @@
 		<format>v</format>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -200,8 +248,8 @@
 		<format>v</format>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -215,8 +263,8 @@
 		<format>v</format>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -235,8 +283,8 @@
 		<box>false</box>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -255,8 +303,8 @@
 		<box>false</box>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -275,8 +323,8 @@
 		<box>false</box>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -310,8 +358,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</gauge>
@@ -345,8 +393,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</gauge>
@@ -380,8 +428,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</gauge -->
@@ -416,8 +464,8 @@
 		<pointer-type>fixed</pointer-type>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</tape>
@@ -452,8 +500,8 @@
 		<pointer-type>fixed</pointer-type>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</tape>
@@ -488,8 +536,8 @@
 		<pointer-type>fixed</pointer-type>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</tape -->
@@ -504,8 +552,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -520,8 +568,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -536,8 +584,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -555,8 +603,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -574,8 +622,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -593,8 +641,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -609,8 +657,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -625,8 +673,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -641,8 +689,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -660,8 +708,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -679,8 +727,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -698,8 +746,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -714,8 +762,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -730,8 +778,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -746,8 +794,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -765,8 +813,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -784,8 +832,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -803,8 +851,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -838,8 +886,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</tape>
@@ -873,8 +921,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</tape>
@@ -908,8 +956,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</tape -->
@@ -924,8 +972,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -940,8 +988,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -956,8 +1004,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -977,8 +1025,8 @@
 		<option>left</option>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -998,8 +1046,8 @@
 		<option>left</option>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -1019,8 +1067,8 @@
 		<option>left</option>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -1035,8 +1083,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -1051,8 +1099,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -1067,8 +1115,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -1088,8 +1136,8 @@
 		<option>left</option>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</label>
@@ -1109,8 +1157,8 @@
 		<option>left</option>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</label>
@@ -1130,8 +1178,8 @@
 		<option>left</option>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -1162,8 +1210,8 @@
 		<enable-waypoint-marker>false</enable-waypoint-marker>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</ladder>
@@ -1194,8 +1242,8 @@
 		<enable-waypoint-marker>false</enable-waypoint-marker>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</ladder>
@@ -1226,8 +1274,8 @@
 		<enable-waypoint-marker>false</enable-waypoint-marker>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</ladder -->
@@ -1247,8 +1295,8 @@
 					<value>wing-leveler</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1269,8 +1317,8 @@
 					<value>wing-leveler</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1291,8 +1339,8 @@
 					<value>wing-leveler</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1316,8 +1364,8 @@
 					<value>roll-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1341,8 +1389,8 @@
 					<value>roll-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1366,8 +1414,8 @@
 					<value>roll-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1391,8 +1439,8 @@
 					<value>dg-heading-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1416,8 +1464,8 @@
 					<value>dg-heading-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1441,8 +1489,8 @@
 					<value>dg-heading-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1466,8 +1514,8 @@
 					<value>true-heading-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1491,8 +1539,8 @@
 					<value>true-heading-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1516,8 +1564,8 @@
 					<value>true-heading-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1538,8 +1586,8 @@
 					<value>nav1-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1560,8 +1608,8 @@
 					<value>nav1-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1582,8 +1630,8 @@
 					<value>nav1-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1611,8 +1659,8 @@
 					<value>kts</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1640,8 +1688,8 @@
 					<value>kts</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1669,8 +1717,8 @@
 					<value>kts</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1698,8 +1746,8 @@
 					<value>kts</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1727,8 +1775,8 @@
 					<value>kts</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1756,8 +1804,8 @@
 					<value>kts</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1785,8 +1833,8 @@
 					<value>mach</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1814,8 +1862,8 @@
 					<value>mach</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1843,8 +1891,8 @@
 					<value>mach</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -1872,8 +1920,8 @@
 					<value>mach</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1901,8 +1949,8 @@
 					<value>mach</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -1955,8 +2003,8 @@
 					<value>vertical-speed-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -1980,8 +2028,8 @@
 					<value>vertical-speed-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -2005,8 +2053,8 @@
 					<value>vertical-speed-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -2030,8 +2078,8 @@
 					<value>pitch-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -2055,8 +2103,8 @@
 					<value>pitch-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -2080,8 +2128,8 @@
 					<value>pitch-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -2105,8 +2153,8 @@
 					<value>aoa-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -2130,8 +2178,8 @@
 					<value>aoa-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -2155,8 +2203,8 @@
 					<value>aoa-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -2180,8 +2228,8 @@
 					<value>altitude-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -2205,8 +2253,8 @@
 					<value>altitude-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -2230,8 +2278,8 @@
 					<value>altitude-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -2255,8 +2303,8 @@
 					<value>agl-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -2280,8 +2328,8 @@
 					<value>agl-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -2305,8 +2353,8 @@
 					<value>agl-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -2327,8 +2375,8 @@
 					<value>gs1-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Captain</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>0</value>
 				</equals>
 			</and>
 		</condition>
@@ -2349,8 +2397,8 @@
 					<value>gs1-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>First Officer</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>1</value>
 				</equals>
 			</and>
 		</condition>
@@ -2371,8 +2419,8 @@
 					<value>gs1-hold</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -2399,8 +2447,8 @@
 		<divisions>10</divisions>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Captain</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</dial>
@@ -2426,8 +2474,8 @@
 		<divisions>10</divisions>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>First Officer</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</dial>
@@ -2453,8 +2501,8 @@
 		<divisions>10</divisions>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</dial>
@@ -2469,8 +2517,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -2488,8 +2536,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -2504,8 +2552,8 @@
 		<halign>left</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -2523,8 +2571,8 @@
 		<halign>right</halign>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -2542,8 +2590,8 @@
 		</input>
 		<condition>
 			<equals>
-				<property>/sim/current-view/name</property>
-				<value>Navigator</value>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</label>
@@ -2562,8 +2610,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[0]</property>
@@ -2587,8 +2635,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[0]</property>
@@ -2612,8 +2660,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[0]</property>
@@ -2637,8 +2685,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[0]</property>
@@ -2662,8 +2710,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[1]</property>
@@ -2687,8 +2735,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[1]</property>
@@ -2712,8 +2760,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[1]</property>
@@ -2737,8 +2785,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[1]</property>
@@ -2762,8 +2810,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[1]</property>
@@ -2787,8 +2835,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[2]</property>
@@ -2812,8 +2860,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[2]</property>
@@ -2837,8 +2885,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[2]</property>
@@ -2862,8 +2910,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[2]</property>
@@ -2887,8 +2935,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[2]</property>
@@ -2912,8 +2960,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[3]</property>
@@ -2937,8 +2985,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[3]</property>
@@ -2962,8 +3010,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[3]</property>
@@ -2987,8 +3035,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[3]</property>
@@ -3012,8 +3060,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[3]</property>
@@ -3037,8 +3085,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[4]</property>
@@ -3062,8 +3110,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[4]</property>
@@ -3087,8 +3135,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[4]</property>
@@ -3112,8 +3160,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[4]</property>
@@ -3137,8 +3185,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[4]</property>
@@ -3162,8 +3210,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[5]</property>
@@ -3187,8 +3235,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[5]</property>
@@ -3212,8 +3260,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[5]</property>
@@ -3237,8 +3285,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[5]</property>
@@ -3262,8 +3310,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[5]</property>
@@ -3287,8 +3335,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[6]</property>
@@ -3312,8 +3360,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[6]</property>
@@ -3337,8 +3385,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[6]</property>
@@ -3362,8 +3410,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[6]</property>
@@ -3387,8 +3435,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[6]</property>
@@ -3412,8 +3460,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[7]</property>
@@ -3437,8 +3485,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[7]</property>
@@ -3462,8 +3510,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[7]</property>
@@ -3487,8 +3535,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[7]</property>
@@ -3512,8 +3560,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[7]</property>
@@ -3537,8 +3585,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[8]</property>
@@ -3562,8 +3610,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[8]</property>
@@ -3587,8 +3635,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[8]</property>
@@ -3612,8 +3660,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[8]</property>
@@ -3637,8 +3685,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[8]</property>
@@ -3662,8 +3710,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[9]</property>
@@ -3687,8 +3735,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[9]</property>
@@ -3712,8 +3760,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[9]</property>
@@ -3737,8 +3785,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[9]</property>
@@ -3762,8 +3810,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[9]</property>
@@ -3787,8 +3835,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[10]</property>
@@ -3812,8 +3860,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[10]</property>
@@ -3837,8 +3885,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[10]</property>
@@ -3862,8 +3910,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[10]</property>
@@ -3887,8 +3935,8 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 				<not-equals>
 					<property>/voodoomaster/route/marker[10]</property>
@@ -3917,8 +3965,8 @@
 					<value>obs</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -3941,8 +3989,8 @@
 					<property>/instrumentation/gps/from-flag</property>
 				</not>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -3963,8 +4011,8 @@
 				</equals>
 				<property>/instrumentation/gps/from-flag</property>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -3988,8 +4036,8 @@
 					<value>dto</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -4013,8 +4061,8 @@
 					<value>leg</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -4039,8 +4087,8 @@
 					<value>leg</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -4060,8 +4108,8 @@
 			<and>
 				<property>/instrumentation/gps/wp/wp[1]/valid</property>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -4081,8 +4129,8 @@
 			<and>
 				<property>/instrumentation/gps/wp/wp[1]/valid</property>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -4102,8 +4150,8 @@
 			<and>
 				<property>/instrumentation/gps/wp/wp[1]/valid</property>	
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
@@ -4131,8 +4179,8 @@
     					<value>0.1</value>
 				</greater-than>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Navigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>2</value>
 				</equals>
 			</and>
 		</condition>
