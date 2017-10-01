@@ -14,7 +14,7 @@
 
 <turbine_engine name="Ichenko-DT18T">
 	<milthrust> 80290.0 </milthrust>  <!-- max take off thrust per stage4 -->
-	<bypassratio>   5.7 </bypassratio>
+	<bypassratio>   1.7 </bypassratio>
 	<tsfc>          0.337 </tsfc>
 	<bleed>         0.03</bleed>
 	<idlen1>       25.0 </idlen1>

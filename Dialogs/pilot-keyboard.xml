@@ -68,6 +68,18 @@
 			</binding>
 		</key>
 
+    		<key n="83">
+			<name>S</name>
+			<desc>Cycle Spoilers/Speedbrakes</desc>
+			<binding>
+				<command>property-cycle</command>
+				<property>/controls/flight/speedbrake</property>
+				<value type="double">0.00</value>
+				<value type="double">0.50</value>
+				<value type="double">1.00</value>				
+			</binding>
+		</key>
+
 		<key n="100">
 			<name>d</name>
 			<desc>Back Door</desc>
@@ -98,12 +110,15 @@
 			</binding>
 		</key>
 
-		<key n="115">
+    		<key n="115">
 			<name>s</name>
-			<desc>autostart / shutdown</desc>
+			<desc>Cycle Spoilers/Speedbrakes</desc>
 			<binding>
-				<command>nasal</command>
-				<script>controls.autostart();</script>
+				<command>property-cycle</command>
+				<property>/controls/flight/speedbrake</property>
+				<value type="double">1.00</value>
+				<value type="double">0.50</value>
+				<value type="double">0.00</value>				
 			</binding>
 		</key>
 

@@ -536,7 +536,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.8</factor>
 		<axis>
 			<x>1</x>
@@ -548,7 +548,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.01</factor>
 		<axis>
 			<x>0</x>
@@ -560,7 +560,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-Flap-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>30</factor>
 		<center>
 			<x-m>5.30</x-m>
@@ -577,7 +577,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-Cover-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-4.0</factor>
 		<axis>
 			<x>1</x>
@@ -589,7 +589,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Flap-Br1R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -627,7 +627,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Flap-Br2R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -666,7 +666,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.8</factor>
 		<axis>
 			<x>1</x>
@@ -678,7 +678,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.01</factor>
 		<axis>
 			<x>0</x>
@@ -690,7 +690,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-Flap-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>35</factor>
 		<center>
 			<x-m>5.30</x-m>
@@ -707,7 +707,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-Cover-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-4.0</factor>
 		<axis>
 			<x>1</x>
@@ -719,7 +719,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Flap-Br3R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -757,7 +757,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Flap-Br4R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -796,7 +796,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.9</factor>
 		<axis>
 			<x>1</x>
@@ -808,7 +808,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-0.01</factor>
 		<axis>
 			<x>0</x>
@@ -820,7 +820,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>L-Flap-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>30</factor>
 		<center>
 			<x-m>5.60</x-m>
@@ -837,7 +837,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Flap-Cover-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-4.0</factor>
 		<axis>
 			<x>1</x>
@@ -849,7 +849,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Flap-Br5R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -887,7 +887,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Flap-Br6R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -923,10 +923,11 @@ An-124 Ruslan model configuration file
 	</animation>
 
 	<!-- Right Flap 2 -->
+
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.8</factor>
 		<axis>
 			<x>1</x>
@@ -938,7 +939,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.01</factor>
 		<axis>
 			<x>0</x>
@@ -950,7 +951,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-Flap-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>30</factor>
 		<center>
 			<x-m>5.30</x-m>
@@ -967,7 +968,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-Cover-2</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-4.0</factor>
 		<axis>
 			<x>1</x>
@@ -979,7 +980,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Flap-Br1R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1017,7 +1018,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Flap-Br2R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1056,7 +1057,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.8</factor>
 		<axis>
 			<x>1</x>
@@ -1068,7 +1069,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.01</factor>
 		<axis>
 			<x>0</x>
@@ -1080,7 +1081,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-Flap-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>35</factor>
 		<center>
 			<x-m>5.30</x-m>
@@ -1097,7 +1098,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-Cover-3</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-4.0</factor>
 		<axis>
 			<x>1</x>
@@ -1109,7 +1110,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Flap-Br3R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1147,7 +1148,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Flap-Br4R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1186,7 +1187,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>0.9</factor>
 		<axis>
 			<x>1</x>
@@ -1198,7 +1199,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-0.01</factor>
 		<axis>
 			<x>0</x>
@@ -1210,7 +1211,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>R-Flap-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>30</factor>
 		<center>
 			<x-m>5.30</x-m>
@@ -1227,7 +1228,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Flap-Cover-4</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<factor>-4.0</factor>
 		<axis>
 			<x>1</x>
@@ -1239,7 +1240,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Flap-Br5R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1277,7 +1278,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Flap-Br6R</object-name>
-		<property>surface-positions/flap-pos-norm</property>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1318,32 +1319,20 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>L-Wing-Slat</object-name>
-		<property>surface-positions/flap-pos-norm</property>
-		<factor>-0.5</factor>
-		<condition>
-			<less-than>
-				<property>surface-positions/flap-pos-norm</property>
-				<value>0.333</value>
-			</less-than>
-		</condition>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
+		<factor>0.5</factor>
 		<axis>
-			<x>1</x>
+			<x>0</x>
 			<y>0</y>
-			<z>0</z>
+			<z>1</z>
 		</axis>
 	</animation>
 
 	<animation>
 		<type>rotate</type>
 		<object-name>L-Wing-Slat</object-name>
-		<property>surface-positions/flap-pos-norm</property>
-		<factor>-35</factor>
-		<condition>
-			<less-than>
-				<property>surface-positions/flap-pos-norm</property>
-				<value>0.333</value>
-			</less-than>
-		</condition>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
+		<factor>-25</factor>
 		<center>
 			<x-m>-0.55</x-m>
 			<y-m>-8.51</y-m>
@@ -1360,18 +1349,12 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>translate</type>
 		<object-name>R-Wing-Slat</object-name>
-		<property>surface-positions/flap-pos-norm</property>
-		<factor>-0.5</factor>
-		<condition>
-			<less-than>
-				<property>surface-positions/flap-pos-norm</property>
-				<value>0.333</value>
-			</less-than>
-		</condition>
+		<property>/fdm/jsbsim/fcs/flap-pos-norm</property>
+		<factor>0.5</factor>
 		<axis>
-			<x>1</x>
+			<x>0</x>
 			<y>0</y>
-			<z>0</z>
+			<z>1</z>
 		</axis>
 	</animation>
 
@@ -1379,13 +1362,7 @@ An-124 Ruslan model configuration file
 		<type>rotate</type>
 		<object-name>R-Wing-Slat</object-name>
 		<property>surface-positions/flap-pos-norm</property>
-		<factor>-35</factor>
-		<condition>
-			<less-than>
-				<property>surface-positions/flap-pos-norm</property>
-				<value>0.333</value>
-			</less-than>
-		</condition>
+		<factor>-25</factor>
 		<center>
 			<x-m>-0.55</x-m>
 			<y-m>8.51</y-m>
@@ -1404,7 +1381,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>LW-Spoilers-Outer</object-name>
-		<property>surface-positions/spoiler-pos-norm</property>
+		<property>controls/flight/speedbrake</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>7.80</x-m>
@@ -1422,7 +1399,7 @@ An-124 Ruslan model configuration file
 	<animation>
 		<type>rotate</type>
 		<object-name>RW-Spoilers-Outer</object-name>
-		<property>surface-positions/spoiler-pos-norm</property>
+		<property>controls/flight/speedbrake</property>
 		<factor>-60</factor>
 		<center>
 			<x-m>7.80</x-m>
