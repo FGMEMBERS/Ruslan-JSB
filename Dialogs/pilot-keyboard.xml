@@ -65,6 +65,8 @@
 				<value type="int">0</value>
 				<value type="int">1</value>
 				<value type="int">2</value>				
+				<!-- 3 reserved for radio operator -->
+				<value type="int">4</value>				
 			</binding>
 		</key>
 
@@ -104,6 +106,8 @@
 			<binding>
 				<command>property-cycle</command>
 				<property>/voodoomaster/hud/mode</property>
+				<value type="int">4</value>
+				<!-- 3 reserved for radio operator -->
 				<value type="int">2</value>
 				<value type="int">1</value>
 				<value type="int">0</value>				

@@ -387,6 +387,26 @@ var weathercontrol=func{
 	settimer(weathercontrol, 2);
 }
 
+var enginecontrol=func{
+	var eng0ff=getprop("/fdm/jsbsim/propulsion/engine[0]/fuel-flow-rate-pps");
+	var eng1ff=getprop("/fdm/jsbsim/propulsion/engine[1]/fuel-flow-rate-pps");
+	var eng2ff=getprop("/fdm/jsbsim/propulsion/engine[2]/fuel-flow-rate-pps");
+	var eng3ff=getprop("/fdm/jsbsim/propulsion/engine[3]/fuel-flow-rate-pps");
+	var eng4ff=getprop("/fdm/jsbsim/propulsion/engine[4]/fuel-flow-rate-pps");
+	var eng5ff=getprop("/fdm/jsbsim/propulsion/engine[5]/fuel-flow-rate-pps");
+	var eng6ff=getprop("/fdm/jsbsim/propulsion/engine[6]/fuel-flow-rate-pps");
+	var eng7ff=getprop("/fdm/jsbsim/propulsion/engine[7]/fuel-flow-rate-pps");
+
+	var fftotal=eng0ff+eng1ff+eng2ff+eng3ff+eng4ff+eng5ff+eng6ff+eng7ff;
+	var seconds=getprop("/fdm/jsbsim/propulsion/total-fuel-lbs")/fftotal;
+	var hours=seconds/3609;
+	var range=hours*getprop("/instrumentation/gps/indicated-ground-speed-kt");
+	setprop("/voodoomaster/engines/fuel_flow_total_pps", fftotal);
+	setprop("/voodoomaster/engines/airtime", hours);
+	setprop("/voodoomaster/engines/range_nm", range);
+	settimer(enginecontrol, 2);
+}
+
 var routecontrol=func{
 	if (getprop("/autopilot/route-manager/active")) {
 		# we have an active route, rebuild display
@@ -447,6 +467,7 @@ var routecontrol=func{
 }
 
 settimer(weathercontrol, 2);
+settimer(enginecontrol, 2);
 setlistener("/autopilot/route-manager/active", routecontrol);
 setlistener("/autopilot/route-manager/current-wp", routecontrol);
 setlistener("/autopilot/route-manager/route/num", routecontrol);

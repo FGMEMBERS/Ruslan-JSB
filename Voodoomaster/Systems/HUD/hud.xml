@@ -2,6 +2,16 @@
 
 <PropertyList>
 
+	<!-- Modes
+
+		0 = Captian
+		1 = First Officer
+		2 = Navigator
+		3 = Radio Operator (not implemented yet)
+		4 = Engineer/Engines (not implemented yet)
+	
+	-->
+
 	<label>
 		<name>CAPTAIN_TXT</name>
 		<width>1</width>
@@ -46,6 +56,22 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>ENGINEER1_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-180</x>
+		<y>80</y>
+		<format>ENGINEER/ENGINES</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -109,6 +135,27 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>G Load</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-180</x>
+		<y>60</y>
+		<input>
+			<property>/accelerations/pilot/z-accel-fps_sec</property>
+			<factor>-0.03108095</factor>
+			<damp>1.0</damp>
+		</input>
+		<format>G%2.1f</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -224,6 +271,43 @@
 		</condition>
 	</tape>
 
+	<tape>
+		<name>Gyrocompass</name>
+		<x>-150</x>
+		<y>45</y>
+		<width>300</width>
+		<height>2</height>
+		<input>
+			<property>orientation/heading-deg</property>
+			<factor>0.1</factor>
+			<max>85</max>
+			<min>0</min>
+		</input>
+		<display-span>5</display-span>
+		<option>bottom</option>
+		<major-divisions>5</major-divisions>
+		<minor-divisions>1</minor-divisions>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>true</cap-bottom>
+		<cap-top>true</cap-top>
+		<cap-right>true</cap-right>
+		<cap-left>true</cap-left>
+		<marker-offset>0</marker-offset>
+		<enable-pointer>false</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<tick-type>line</tick-type>
+		<tick-length>fixed</tick-length>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</tape>
+
 	<label>
 		<name>Gyro Heading Marker</name>
 		<x>0</x>
@@ -270,6 +354,21 @@
 	</label>
 
 	<label>
+		<name>Gyro Heading Marker</name>
+		<x>0</x>
+		<y>55</y>
+		<width>1</width>
+		<height>1</height>
+		<format>v</format>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
 		<name>Gyro Heading Label</name>
 		<x>-10</x>
 		<y>60</y>
@@ -325,6 +424,26 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>Gyro Heading Label</name>
+		<x>-10</x>
+		<y>60</y>
+		<width>17</width>
+		<height>4</height>
+		<input>
+			<property>/orientation/heading-deg</property>
+		</input>
+		<format>%4.0f</format>
+		<halign>center</halign>
+		<box>false</box>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -399,12 +518,12 @@
 		</condition>
 	</gauge>
 
-	<!-- gauge>
+	<gauge>
 		<name>Throttle</name>
-		<x>-100</x>
-		<y>-60</y>
+		<x>-180</x>
+		<y>-150</y>
 		<width>5</width>
-		<height>100</height>
+		<height>180</height>
 		<option>vertical</option>
 		<option>left</option>
 		<option>notext</option>
@@ -429,10 +548,10 @@
 		<condition>
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
-				<value>2</value>
+				<value>4</value>
 			</equals>
 		</condition>
-	</gauge -->
+	</gauge>
 
 	<tape>
 		<name>KIAS</name>
@@ -506,12 +625,12 @@
 		</condition>
 	</tape>
 
-	<!-- tape>
+	<tape>
 		<name>KIAS</name>
-		<x>-70</x>
-		<y>-60</y>
+		<x>-160</x>
+		<y>-150</y>
 		<width>10</width>
-		<height>100</height>
+		<height>180</height>
 		<input>
 			<property>/velocities/airspeed-kt</property>
 			<factor>1</factor>
@@ -537,10 +656,10 @@
 		<condition>
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
-				<value>2</value>
+				<value>4</value>
 			</equals>
 		</condition>
-	</tape -->
+	</tape>
 
 	<label>
 		<name>MACH_TXT</name>
@@ -586,6 +705,23 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+
+	<label>
+		<name>MACH_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-195</x>
+		<y>-170</y>
+		<format>MACH:</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -643,6 +779,25 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>MACH_NUM</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-140</x>
+		<y>-170</y>
+		<input>
+			<property>/velocities/mach</property>
+		</input>
+		<format>%4.2f</format>
+		<halign>right</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -696,6 +851,22 @@
 	</label>
 
 	<label>
+		<name>KIAS_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-195</x>
+		<y>-180</y>
+		<format>KIAS:</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
 		<name>KIAS_NUM</name>
 		<width>1</width>
 		<height>1</height>
@@ -752,6 +923,26 @@
 		</condition>
 	</label>
 
+
+	<label>
+		<name>KIAS_NUM</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-140</x>
+		<y>-180</y>
+		<input>
+			<property>/velocities/airspeed-kt</property>
+		</input>
+			<format>%3dkts</format>
+		<halign>right</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
 	<label>
 		<name>GroundSpeed_TXT</name>
 		<width>1</width>
@@ -796,6 +987,22 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>GroundSpeed_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-195</x>
+		<y>-190</y>
+		<format>GS:</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -853,6 +1060,25 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>GroundSpeed_NUM</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-140</x>
+		<y>-190</y>
+		<format>%3dkts</format>
+		<halign>right</halign>
+		<input>
+			<property>/instrumentation/gps/indicated-ground-speed-kt</property>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -927,12 +1153,12 @@
 		</condition>
 	</tape>
 
-	<!-- tape>
+	<tape>
 		<name>Altitude-MSL</name>
-		<x>60</x>
-		<y>-60</y>
+		<x>160</x>
+		<y>-150</y>
 		<width>10</width>
-		<height>100</height>
+		<height>180</height>
 		<option>right</option>
 		<option>vertical</option>
 		<major-divisions>100</major-divisions>
@@ -957,10 +1183,10 @@
 		<condition>
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
-				<value>2</value>
+				<value>4</value>
 			</equals>
 		</condition>
-	</tape -->
+	</tape>
 
 	<label>
 		<name>Altitude_TXT</name>
@@ -1006,6 +1232,22 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>Altitude_TXT</name>
+		<x>120</x>
+		<y>-170</y>
+		<width>1</width>
+		<height>1</height>
+		<format>ALT-MSL:</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -1074,6 +1316,27 @@
 	</label>
 
 	<label>
+		<name>Altitude_NUM</name>
+		<x>200</x>
+		<y>-170</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/position/altitude-ft</property>
+		</input>
+		<format>%4.0fft</format>
+		<halign>right</halign>
+		<box>false</box>
+		<option>left</option>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
 		<name>AGL_TXT</name>
 		<x>20</x>
 		<y>-80</y>
@@ -1117,6 +1380,22 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>AGL_TXT</name>
+		<x>120</x>
+		<y>-180</y>
+		<width>1</width>
+		<height>1</height>
+		<format>ALT-AGL:</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -1184,6 +1463,27 @@
 		</condition>
 	</label>
 
+	<label>
+		<name>AGL_NUM</name>
+		<x>200</x>
+		<y>-180</y>
+		<width>1</width>
+		<height>1</height>
+		<input>
+			<property>/position/altitude-agl-ft</property>
+		</input>
+		<format>%4.0fft</format>
+		<halign>right</halign>
+		<box>false</box>
+		<option>left</option>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
 	<ladder>
 		<name>Pitch Ladder</name>
 		<type>pitch</type>
@@ -1248,38 +1548,6 @@
 		</condition>
 	</ladder>
 
-	<!-- ladder>
-		<name>Pitch Ladder</name>
-		<type>pitch</type>
-		<x>-23</x>
-		<y>-320</y>
-		<width>48</width>
-		<height>620</height>
-		<roll-input>
-			<property>/orientation/roll-deg</property>
-		</roll-input>
-		<pitch-input>
-			<property>/orientation/pitch-deg</property>
-		</pitch-input>
-		<compression-factor>7.8</compression-factor>
-		<display-span>8.0</display-span>
-		<divisions>2.0</divisions>
-		<screen-hole>10</screen-hole>
-		<zero-bar-overlength>15</zero-bar-overlength>
-		<enable-dynamic-origin>false</enable-dynamic-origin>
-		<enable-fuselage-ref-line>true</enable-fuselage-ref-line>
-		<enable-target-spot>true</enable-target-spot>
-		<enable-glide-slope-marker>false</enable-glide-slope-marker>
-		<glide-slope>0.0</glide-slope>
-		<enable-waypoint-marker>false</enable-waypoint-marker>
-		<condition>
-			<equals>
-				<property>/voodoomaster/hud/mode</property>
-				<value>2</value>
-			</equals>
-		</condition>
-	</ladder -->
-
 	<label>
 		<x>-60</x>
 		<y>38</y>
@@ -1324,7 +1592,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-60</x>
 		<y>38</y>
 		<width>40</width>
@@ -1340,11 +1608,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-60</x>
@@ -1396,7 +1664,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-60</x>
 		<y>38</y>
 		<width>40</width>
@@ -1415,11 +1683,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-60</x>
@@ -1471,7 +1739,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-60</x>
 		<y>38</y>
 		<width>40</width>
@@ -1490,11 +1758,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-60</x>
@@ -1546,7 +1814,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-60</x>
 		<y>38</y>
 		<width>40</width>
@@ -1565,11 +1833,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-60</x>
@@ -1615,7 +1883,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-60</x>
 		<y>38</y>
 		<width>40</width>
@@ -1631,11 +1899,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-20</x>
@@ -1695,7 +1963,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-20</x>
 		<y>38</y>
 		<width>40</width>
@@ -1718,11 +1986,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-20</x>
@@ -1782,7 +2050,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-20</x>
 		<y>38</y>
 		<width>40</width>
@@ -1805,11 +2073,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-20</x>
@@ -1869,7 +2137,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-20</x>
 		<y>38</y>
 		<width>40</width>
@@ -1892,11 +2160,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>-20</x>
@@ -1956,7 +2224,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>-20</x>
 		<y>38</y>
 		<width>40</width>
@@ -1978,12 +2246,12 @@
 					<value>mach</value>
 				</equals>
 				<equals>
-					<property>/sim/current-view/name</property>
-					<value>Nevigator</value>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>20</x>
@@ -2035,7 +2303,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>20</x>
 		<y>38</y>
 		<width>40</width>
@@ -2054,11 +2322,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>20</x>
@@ -2110,7 +2378,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>20</x>
 		<y>38</y>
 		<width>40</width>
@@ -2129,11 +2397,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>20</x>
@@ -2185,7 +2453,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>20</x>
 		<y>38</y>
 		<width>40</width>
@@ -2204,11 +2472,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>20</x>
@@ -2260,7 +2528,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>20</x>
 		<y>38</y>
 		<width>40</width>
@@ -2279,11 +2547,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>20</x>
@@ -2335,7 +2603,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>20</x>
 		<y>38</y>
 		<width>40</width>
@@ -2354,11 +2622,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<label>
 		<x>20</x>
@@ -2404,7 +2672,7 @@
 		</condition>
 	</label>
 
-	<!-- label>
+	<label>
 		<x>20</x>
 		<y>38</y>
 		<width>40</width>
@@ -2420,11 +2688,11 @@
 				</equals>
 				<equals>
 					<property>/voodoomaster/hud/mode</property>
-					<value>2</value>
+					<value>4</value>
 				</equals>
 			</and>
 		</condition>
-	</label -->
+	</label>
 
 	<dial>
 		<name>wind_direction</name>
@@ -2507,6 +2775,33 @@
 		</condition>
 	</dial>
 
+	<dial>
+		<name>wind_direction</name>
+		<x>175</x>
+		<y>58</y> 
+		<width>10</width>
+		<height>10</height>
+		<input>
+			<property>/voodoomaster/weather/relative-wind</property>
+			<factor>1.0</factor>
+			<damp>0.3</damp>
+		</input>
+		<format></format>
+		<box>false</box>
+		<halign>left</halign>
+		<options>0</options>
+		<option>notext</option>
+		<display-span>0</display-span>
+		<radius>8</radius>
+		<divisions>10</divisions>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</dial>
+
 	<label>
 		<name>dist_total_txt</name>
 		<width>1</width>
@@ -2519,6 +2814,22 @@
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>dist_total_txt</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-95</x>
+		<y>-170</y>
+		<format>Total</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -2543,6 +2854,25 @@
 	</label>
 
 	<label>
+		<name>dist_total_num</name>
+		<width>1</width>
+		<height>1</height>
+		<x>10</x>
+		<y>-170</y>
+		<input>
+			<property>/autopilot/route-manager/total-distance</property>
+		</input>
+		<format>%7.1fnm</format>
+		<halign>right</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
 		<name>dist_left_txt</name>
 		<width>1</width>
 		<height>1</height>
@@ -2550,6 +2880,41 @@
 		<y>-180</y>
 		<format>Remaining</format>
 		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>dist_left_txt</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-95</x>
+		<y>-180</y>
+		<format>Remaining</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>dist_left_num</name>
+		<width>1</width>
+		<height>1</height>
+		<x>10</x>
+		<y>-180</y>
+		<input>
+			<property>/autopilot/route-manager/distance-remaining-nm</property>
+		</input>
+		<format>%7.1fnm</format>
+		<halign>right</halign>
 		<condition>
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
@@ -2572,7 +2937,7 @@
 		<condition>
 			<equals>
 				<property>/voodoomaster/hud/mode</property>
-				<value>2</value>
+				<value>4</value>
 			</equals>
 		</condition>
 	</label>
@@ -4182,6 +4547,884 @@
 					<property>/voodoomaster/hud/mode</property>
 					<value>2</value>
 				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>20</y>
+		<format>N1</format>
+		<halign>right</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>20</y>
+		<format>N2</format>
+		<halign>right</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>20</y>
+		<format>Fuelflow PPS</format>
+		<halign>right</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>type_TXT</name>
+		<width>1</width>
+		<height>1</height>
+		<x>100</x>
+		<y>20</y>
+		<format>EngType</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+
+	<label>
+		<name>Engine_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-120</x>
+		<y>10</y>
+		<format>Engine 1</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[0]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[4]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[0]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[4]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>10</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[0]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>10</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[4]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>type_0</name>
+		<width>1</width>
+		<height>1</height>
+		<x>100</x>
+		<y>10</y>
+		<format>%s</format>
+		<halign>left</halign>
+		<input>
+			<property>/engines/engine-set</property>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>Engine_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-120</x>
+		<y>0</y>
+		<format>Engine 2</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>0</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[1]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>0</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[5]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>0</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[1]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>0</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[5]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>0</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[1]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>0</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[5]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>type_1</name>
+		<width>1</width>
+		<height>1</height>
+		<x>100</x>
+		<y>0</y>
+		<format>%s</format>
+		<halign>left</halign>
+		<input>
+			<property>/engines/engine-set</property>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>Engine_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-120</x>
+		<y>-10</y>
+		<format>Engine 3</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>-10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[2]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>-10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[6]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>-10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[2]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>-10</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[6]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-10</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[2]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-10</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[6]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>type_2</name>
+		<width>1</width>
+		<height>1</height>
+		<x>100</x>
+		<y>-10</y>
+		<format>%s</format>
+		<halign>left</halign>
+		<input>
+			<property>/engines/engine-set</property>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>Engine_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-120</x>
+		<y>-20</y>
+		<format>Engine 4</format>
+		<halign>left</halign>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>-20</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[3]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n1_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>-50</x>
+		<y>-20</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[7]/n1</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>-20</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[3]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>n2_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>0</x>
+		<y>-20</y>
+		<format>%03d</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[7]/n2</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-20</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[3]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>DT18T</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-20</y>
+		<format>%6.2f</format>
+		<halign>right</halign>
+		<input>
+			<property>/fdm/jsbsim/propulsion/engine[7]/fuel-flow-rate-pps</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<equals>
+					<property>/engines/engine-set</property>
+					<value>GP7277</value>
+				</equals>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>type_3</name>
+		<width>1</width>
+		<height>1</height>
+		<x>100</x>
+		<y>-20</y>
+		<format>%s</format>
+		<halign>left</halign>
+		<input>
+			<property>/engines/engine-set</property>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>fuelflow_total</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-40</y>
+		<format>%6.2f pps total</format>
+		<halign>right</halign>
+		<input>
+			<property>/voodoomaster/engines/fuel_flow_total_pps</property>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</label>
+
+	<label>
+		<name>range_nm</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-50</y>
+		<format>%5.1f nm range</format>
+		<halign>right</halign>
+		<input>
+			<property>/voodoomaster/engines/range_nm</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<not>
+					<equals>
+						<property>/voodoomaster/engines/range_nm</property>
+						<value>inf</value>
+					</equals>
+				</not>
+			</and>
+		</condition>
+	</label>
+
+	<label>
+		<name>airtime</name>
+		<width>1</width>
+		<height>1</height>
+		<x>70</x>
+		<y>-60</y>
+		<format>%2.2f Hours</format>
+		<halign>right</halign>
+		<input>
+			<property>/voodoomaster/engines/airtime</property>
+		</input>
+		<condition>
+			<and>
+				<equals>
+					<property>/voodoomaster/hud/mode</property>
+					<value>4</value>
+				</equals>
+				<not>
+					<equals>
+						<property>/voodoomaster/engines/airtime</property>
+						<value>inf</value>
+					</equals>
+				</not>
 			</and>
 		</condition>
 	</label>

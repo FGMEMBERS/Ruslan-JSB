@@ -6,7 +6,9 @@
 
 		<description>Antonov An-124 Ruslan with JSB</description>
 		<author>Peter Brendt (JWocky) - FDM</author>
-		<author>Andino Gonthaeler - Model taken from the A-124 unter Yasim</author>
+		<author>Andino Gonthaeler - Model taken from the A-124 under Yasim</author>
+
+		<minimum-fg-version>2017.3.1</minimum-fg-version>
 
 		<aircraft-version>V02.01.00</aircraft-version>
 		<aircraft-variant>
@@ -906,6 +908,11 @@
 			<bearing n="10" type="float"></bearing>
 			<distance n="10" type="float"></distance>
 		</route>
+		<engines>
+			<fuel_flow_total_pps type="double">0.00</fuel_flow_total_pps>
+			<airtime type="double">0.00</airtime>
+			<range_nm type="double">0.00</range_nm>
+		</engines>
 	</voodoomaster>
 
 	<!-- instrumentation>
