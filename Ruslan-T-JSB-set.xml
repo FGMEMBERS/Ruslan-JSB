@@ -819,21 +819,39 @@
 		<settings>
 			<setting>
 				<name type="string">Engines</name>
-				<current type="int">1</current>
-				<property type="string">/voodoomaster/engines/engine-set</property>
+				<current type="int">0</current>
 				<options>
-					<opt n="0" type="string">Ivchenko D-18T</opt>
-					<opt n="1" type="string">Alliance GP7277</opt>
+					<opt>
+						<name type="string">Ivchenko D-18T</name>
+						<pkey type="string">/engines/engine-set</pkey>
+						<value type="string">DT18T</value>
+					</opt>
+					<opt>
+						<name type="string">Alliance GP7277</name>
+						<pkey type="string">/engines/engine-set</pkey>
+						<value type="string">GP7277</value>
+					</opt>
 				</options>
 			</setting>
 			<setting>
 				<name type="string">Cockpit</name>
-				<current type="int">2</current>
-				<property type="string">/voodoomaster/cockpit/style</property>
+				<current type="int">1</current>
 				<options>
-					<opt n="0" type="string">Original</opt>
-					<opt n="1" type="string">Generic Classic</opt>
-					<opt n="2" type="string">Experimental</opt>
+					<opt>
+						<name type="string">Original</name>
+						<pkey type="string">/voodoomaster/cockpit/style</pkey>
+						<value type="string">Original</value>
+					</opt>
+					<opt>
+						<name type="string">Generic Classic</name>
+						<pkey type="string">/voodoomaster/cockpit/style</pkey>
+						<value type="string">GenClassic</value>
+					</opt>
+					<opt>
+						<name type="string">Experimental</name>
+						<pkey type="string">/voodoomaster/cockpit/style</pkey>
+						<value type="string">Experimental</value>
+					</opt>
 				</options>
 			</setting>
 		</settings>
@@ -1050,6 +1068,7 @@
 		</an-124>
 		<voodoomaster>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
+			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Settings/Settings.nas</file>
 		</voodoomaster>
 		<!--dialogs>
 			<file>Aircraft/An-124/Nasal/dialogs.nas</file>

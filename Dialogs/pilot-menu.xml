@@ -125,24 +125,6 @@
 			</item>
 
 			<item>
-				<label>Select Ivchenko DT18T Engines</label>
-				<binding>
-					<command>property-assign</command>
-					<property>engines/engine-set</property>
-					<value>DT18T</value>
-				</binding>
-			</item>
-
-			<item>
-				<label>Select Alliance GP7277 Engines</label>
-				<binding>
-					<command>property-assign</command>
-					<property>engines/engine-set</property>
-					<value>GP7277</value>
-				</binding>
-			</item>
-
-			<item>
 				<label>Select Livery</label>
 				<binding>
 					<command>nasal</command>

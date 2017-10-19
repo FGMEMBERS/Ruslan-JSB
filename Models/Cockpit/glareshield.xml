@@ -28,7 +28,7 @@
 		</offsets>
 	</model-->
 
-	<model>
+	<!--model>
 		<name>nav1</name>
 		<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/VIR-32/ctl32-nav1.xml</path>
 		<offsets>
@@ -37,7 +37,7 @@
 			<z-m>0.975</z-m>
 			<pitch-deg>-22</pitch-deg>
 		</offsets>
-	</model>
+	</model -->
 
 	<model>
 		<name>nav2</name>
@@ -50,7 +50,7 @@
 		</offsets>
 	</model>
 
-	<model>
+	<!-- model>
 		<name>com1</name>
 		<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/VHF/ctl22-com1.xml</path>
 		<offsets>
@@ -59,10 +59,10 @@
 			<z-m>0.975</z-m>
 			<pitch-deg>-22</pitch-deg>
 		</offsets>
-	</model>
+	</model -->
 
 
-	<model>
+	<!-- model>
 		<name>com2</name>
 		<path>Aircraft/Ruslan-JSB/Models/Cockpit/Instruments/VHF/ctl22-com2.xml</path>
 		<offsets>
@@ -71,7 +71,7 @@
 			<z-m>0.975</z-m>
 			<pitch-deg>-22</pitch-deg>
 		</offsets>
-	</model>
+	</model -->
 
 	<model>
 		<name>adf1</name>
