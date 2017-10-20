@@ -855,6 +855,26 @@
 				</options>
 			</setting>
 		</settings>
+		<pilots>
+			<setting>
+				<name type="string">Nosewheel Steering</name>
+				<current type="int">1</current>
+				<listen type="int">1</listen>
+				<listenprop type="string">/fdm/jsbsim/systems/NWS/engaged</listenprop>
+				<options>
+					<opt>
+						<name type="string">On</name>
+						<pkey type="string">/fdm/jsbsim/systems/NWS/engaged</pkey>
+						<value type="int">1</value>
+					</opt>
+					<opt>
+						<name type="string">Off</name>
+						<pkey type="string">/fdm/jsbsim/systems/NWS/engaged</pkey>
+						<value type="int">0</value>
+					</opt>
+				</options>
+			</setting>
+		</pilots>
 		<steering>
 			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
 			<steering-wheel type="int">0</steering-wheel>
@@ -1069,6 +1089,7 @@
 		<voodoomaster>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Settings/Settings.nas</file>
+			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Pilots/Pilots.nas</file>
 		</voodoomaster>
 		<!--dialogs>
 			<file>Aircraft/An-124/Nasal/dialogs.nas</file>

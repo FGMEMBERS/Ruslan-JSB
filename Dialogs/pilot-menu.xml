@@ -41,20 +41,12 @@
 			</item>
 
 			<item>
-				<label>NWS ON</label>
+				<label>Pilots</label>
 				<binding>
-					<command>property-assign</command>
-					<property>fdm/jsbsim/systems/NWS/engaged</property>
-					<value>1</value>
-				</binding>
-			</item>
-
-			<item>
-				<label>NWS OFF</label>
-				<binding>
-					<command>property-assign</command>
-					<property>fdm/jsbsim/systems/NWS/engaged</property>
-					<value>0</value>
+					<command>nasal</command>
+					<script>
+						var pilots_dialog = voodoomaster.PilotsDialog.new();
+					</script>
 				</binding>
 			</item>
 

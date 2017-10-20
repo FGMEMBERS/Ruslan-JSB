@@ -1,4 +1,4 @@
-var SettingsDialog = {
+var PilotsDialog = {
 
 
 	buttons: [
@@ -9,6 +9,8 @@ var SettingsDialog = {
 			 [nil, nil, nil, nil, nil, nil],
 			 [nil, nil, nil, nil, nil, nil]
 		],
+
+	listeners: [nil, nil, nil, nil, nil, nil],
 
 	srow: -1,
 	scol: -1,
@@ -26,7 +28,7 @@ var SettingsDialog = {
 		var vbox = canvas.VBoxLayout.new();
 		m._dlg.setLayout(vbox);
 
-		var settings_base = props.globals.getNode("/voodoomaster/settings");
+		var settings_base = props.globals.getNode("/voodoomaster/pilots");
 		if (settings_base != nil) {
 			var settings = settings_base.getChildren("setting");
 		} else {
@@ -36,7 +38,7 @@ var SettingsDialog = {
 		for (var i=0; i<size(settings); i+=1) {
 			var s = settings[i];
 
-			var options=props.getNode("/voodoomaster/settings/setting["~i~"]/options").getChildren("opt");
+			var options=props.getNode("/voodoomaster/pilots/setting["~i~"]/options").getChildren("opt");
 			var sname = s.getNode("name", 1).getValue();
 			var hbox=canvas.HBoxLayout.new();
 			vbox.addItem(hbox);
@@ -44,6 +46,8 @@ var SettingsDialog = {
 			line.setText(sname);
 			hbox.addItem(line);
 			var scurrent = s.getNode("current", 1).getValue();
+			var slisten = s.getNode("listen", 1).getValue();
+			var slistenprop = s.getNode("listenprop", 1).getValue();
 			for (var j=0; j<size(options); j+=1) {
 				var o=options[j];
 				var action=o.getNode("name", 1).getValue();
@@ -320,12 +324,50 @@ var SettingsDialog = {
 				}
 				hbox.addItem(me.buttons[i][j]);
 			}
+
+			if (slisten==1) {
+				if (i==0) {
+					me.listeners[i]=setlistener(slistenprop, func{
+						me.changed(0);
+					});
+				}
+				if (i==1) {
+					me.listeners[i]=setlistener(slistenprop, func{
+						me.changed(1);
+					});
+				}
+				if (i==2) {
+					me.listeners[i]=setlistener(slistenprop, func{
+						me.changed(2);
+					});
+				}
+				if (i==3) {
+					me.listeners[i]=setlistener(slistenprop, func{
+						me.changed(3);
+					});
+				}
+				if (i==4) {
+					me.listeners[i]=setlistener(slistenprop, func{
+						me.changed(4);
+					});
+				}
+				if (i==5) {
+					me.listeners[i]=setlistener(slistenprop, func{
+						me.changed(5);
+					});
+				}
+			}
 		}
 
 		var hbox2=canvas.HBoxLayout.new();
 		vbox.addItem(hbox2);
 		btnClose=canvas.gui.widgets.Button.new( m._root, canvas.style, {}).setText("Close Window");
 		btnClose.listen("clicked", func{
+			for (var i=0; i<6; i+=1) {
+				if (me.listeners[i]!=nil) {
+					removelistener(me.listeners[i]);
+				}
+			}
 			m._dlg.del();
 		});
 
@@ -351,9 +393,9 @@ var SettingsDialog = {
 				} else {
 					if (me.srow==row) {
 						if (me.scol==col) {
-							setprop("/voodoomaster/settings/setting["~row~"]/current", c);
-							var prop=getprop("/voodoomaster/settings/setting["~row~"]/options/opt["~c~"]/pkey");
-							var val=getprop("/voodoomaster/settings/setting["~row~"]/options/opt["~c~"]/value");
+							setprop("/voodoomaster/pilots/setting["~row~"]/current", c);
+							var prop=getprop("/voodoomaster/pilots/setting["~row~"]/options/opt["~c~"]/pkey");
+							var val=getprop("/voodoomaster/pilots/setting["~row~"]/options/opt["~c~"]/value");
 							setprop(prop, val);
 						}
 					}
@@ -364,6 +406,26 @@ var SettingsDialog = {
 			if (me.scol==col) {
 				me.srow=-1;
 				me.scol=-1;
+			}
+		}
+	},
+
+	changed: func (row) {
+		if ((me.srow<0)) {
+			if ((me.scol<0)) {
+				print("prop changed");
+				for (var c=0; c<6; c+=1) {
+					if (me.buttons[row][c]!=nil) {
+						var val=getprop("/voodoomaster/pilots/setting["~row~"]/options/opt["~c~"]/value");
+						var slisten = getprop("/voodoomaster/pilots/setting/listen");
+						var slistenprop = getprop("/voodoomaster/pilots/setting/listenprop");
+						if (slisten==1) {
+							if (val==getprop(slistenprop)) {
+								me.buttons[row][c].setChecked(1);
+							}
+						}
+					}
+				}
 			}
 		}
 	}
