@@ -562,56 +562,56 @@
 			<tank n="14">	<!-- tanker only, refueling tank -->
 				<name>Center 1</name>
 				<tank-num type="int">14</tank-num>
-				<capacity-lbs type="float"> 58048 </capacity-lbs>
-				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<capacity-lbs type="float"> 50048 </capacity-lbs>
+				<capacity-gal_us type="float"> 7469.85 </capacity-gal_us>
 				<tank-type type="string">refuel</tank-type>
-				<level-lbs alias="/fdm/jsbsim/propulsion/tank[14]/contents-lbs">58048.00</level-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[14]/contents-lbs">0.00</level-lbs>
 			</tank>
 
 			<tank n="15">	<!-- tanker only, refueling tank -->
 				<name>Center 2</name>
 				<tank-num type="int">15</tank-num>
-				<capacity-lbs type="float"> 58048 </capacity-lbs>
-				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<capacity-lbs type="float"> 50048 </capacity-lbs>
+				<capacity-gal_us type="float"> 7469.85 </capacity-gal_us>
 				<tank-type type="string">refuel</tank-type>
-				<level-lbs alias="/fdm/jsbsim/propulsion/tank[15]/contents-lbs">58048.00</level-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[15]/contents-lbs">0.00</level-lbs>
 			</tank>
 
 			<tank n="16">	<!-- tanker only, refueling tank -->
 				<name>Center 3</name>
 				<tank-num type="int">16</tank-num>
-				<capacity-lbs type="float"> 58048 </capacity-lbs>
-				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<capacity-lbs type="float"> 50048 </capacity-lbs>
+				<capacity-gal_us type="float"> 7469.85 </capacity-gal_us>
 				<tank-type type="string">refuel</tank-type>
-				<level-lbs alias="/fdm/jsbsim/propulsion/tank[16]/contents-lbs">58048.00</level-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[16]/contents-lbs">0.00</level-lbs>
 			</tank>
 
 			<tank n="17">	<!-- tanker only, refueling tank -->
 				<name>Center 4</name>
 				<tank-num type="int">17</tank-num>
-				<capacity-lbs type="float"> 58048 </capacity-lbs>
-				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<capacity-lbs type="float"> 50048 </capacity-lbs>
+				<capacity-gal_us type="float"> 7469.85 </capacity-gal_us>
 				<tank-type type="string">refuel</tank-type>
 				<valve type="int">1</valve>
-				<level-lbs alias="/fdm/jsbsim/propulsion/tank[17]/contents-lbs">58048.00</level-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[17]/contents-lbs">0.00</level-lbs>
 			</tank>
 
 			<tank n="18">	<!-- tanker only, refueling tank -->
 				<name>Center 5</name>
 				<tank-num type="int">18</tank-num>
-				<capacity-lbs type="float"> 58048 </capacity-lbs>
-				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<capacity-lbs type="float"> 50048 </capacity-lbs>
+				<capacity-gal_us type="float"> 7469.85 </capacity-gal_us>
 				<tank-type type="string">refuel</tank-type>
-				<level-lbs alias="/fdm/jsbsim/propulsion/tank[18]/contents-lbs">58048.00</level-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[18]/contents-lbs">0.00</level-lbs>
 			</tank>
 
 			<tank n="19">	<!-- tanker only, refueling tank -->
 				<name>Center 6</name>
 				<tank-num type="int">19</tank-num>
-				<capacity-lbs type="float"> 58048 </capacity-lbs>
-				<capacity-gal_us type="float"> 8663.89 </capacity-gal_us>
+				<capacity-lbs type="float"> 50048 </capacity-lbs>
+				<capacity-gal_us type="float"> 7469.85 </capacity-gal_us>
 				<tank-type type="string">refuel</tank-type>
-				<level-lbs alias="/fdm/jsbsim/propulsion/tank[19]/contents-lbs">58048.00</level-lbs>
+				<level-lbs alias="/fdm/jsbsim/propulsion/tank[19]/contents-lbs">0.00</level-lbs>
 			</tank>
 
 		</fuel>

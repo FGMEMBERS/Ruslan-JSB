@@ -1122,15 +1122,15 @@
 				<table>
 					<independentVar>aero/h_b-mac-ft</independentVar>
 					<tableData>
-		                          0.0000	0.0480
-       	        		          0.1000	0.5150
-       	        		          0.1500	0.6290
-       	        		          0.2000	0.7090
-       	        		          0.3000	0.8150
-       	        		          0.4000	0.8820
-       	        		          0.5000	0.9280
-       	        		          0.6000	0.9620
-       	        		          0.7000	0.9880
+		                          0.0000	0.0080
+       	        		          0.1000	0.3150
+       	        		          0.1500	0.4290
+       	        		          0.2000	0.5090
+       	        		          0.3000	0.6150
+       	        		          0.4000	0.6820
+       	        		          0.5000	0.7280
+       	        		          0.6000	0.7620
+       	        		          0.7000	0.7880
        	        		          0.8000	1.0000
        	        		      </tableData>
        	        		  </table>
@@ -1188,7 +1188,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/flap-pos-deg</property>
-					<value> 0.06000 </value>
+					<value> 0.06500 </value>
 				</product>
 			</function>
 
@@ -1267,7 +1267,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/flap-pos-deg</property>
-					<value> 0.00145 </value>
+					<value> 0.00125 </value>
 				</product>
 			</function>
 
