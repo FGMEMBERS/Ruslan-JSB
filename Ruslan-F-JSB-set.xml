@@ -750,6 +750,69 @@
 			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel</fuel-and-payload>
 			<system-settings type="string">Antonov An-124 System Settings</system-settings>
 		</dialogs>
+		<internal>
+			<message-header type="string">...</message-header>
+			<message-switcher type="string">...</message-switcher>
+
+			<msg_pump0 type="string">Fuel pumps left wing starting!</msg_pump0>
+			<msg_pump1 type="string">Fuel pumps right wing starting!</msg_pump1>
+
+			<msg_engine0 type="string">Engine 1 starting up!</msg_engine0>
+			<msg_engine1 type="string">Engine 2 starting up!</msg_engine1>
+			<msg_engine2 type="string">Engine 3 starting up!</msg_engine2>
+			<msg_engine3 type="string">Engine 4 starting up!</msg_engine3>
+			<msg_engine4 type="string">Engine 1 starting up!</msg_engine4>
+			<msg_engine5 type="string">Engine 2 starting up!</msg_engine5>
+			<msg_engine6 type="string">Engine 3 starting up!</msg_engine6>
+			<msg_engine7 type="string">Engine 4 starting up!</msg_engine7>
+
+			<msg_engspin0 type="string">Engine 1 spinning up!</msg_engspin0>
+			<msg_engspin1 type="string">Engine 2 spinning up!</msg_engspin1>
+			<msg_engspin2 type="string">Engine 3 spinning up!</msg_engspin2>
+			<msg_engspin3 type="string">Engine 4 spinning up!</msg_engspin3>
+			<msg_engspin4 type="string">Engine 1 spinning up!</msg_engspin4>
+			<msg_engspin5 type="string">Engine 2 spinning up!</msg_engspin5>
+			<msg_engspin6 type="string">Engine 3 spinning up!</msg_engspin6>
+			<msg_engspin7 type="string">Engine 4 spinning up!</msg_engspin7>
+
+			<msg_engwatch0 type="string">Engine 1 is running!</msg_engwatch0>
+			<msg_engwatch1 type="string">Engine 2 is running!</msg_engwatch1>
+			<msg_engwatch2 type="string">Engine 3 is running!</msg_engwatch2>
+			<msg_engwatch3 type="string">Engine 4 is running!</msg_engwatch3>
+			<msg_engwatch4 type="string">Engine 1 is running!</msg_engwatch4>
+			<msg_engwatch5 type="string">Engine 2 is running!</msg_engwatch5>
+			<msg_engwatch6 type="string">Engine 3 is running!</msg_engwatch6>
+			<msg_engwatch7 type="string">Engine 4 is running!</msg_engwatch7>
+
+			<msg_engine0_stop type="string">Engine 1 shutting down!</msg_engine0_stop>
+			<msg_engine1_stop type="string">Engine 2 shutting down!</msg_engine1_stop>
+			<msg_engine2_stop type="string">Engine 3 shutting down!</msg_engine2_stop>
+			<msg_engine3_stop type="string">Engine 4 shutting down!</msg_engine3_stop>
+			<msg_engine4_stop type="string">Engine 1 shutting down!</msg_engine4_stop>
+			<msg_engine5_stop type="string">Engine 2 shutting down!</msg_engine5_stop>
+			<msg_engine6_stop type="string">Engine 3 shutting down!</msg_engine6_stop>
+			<msg_engine7_stop type="string">Engine 4 shutting down!</msg_engine7_stop>
+
+		</internal>
+		<systems>
+			<electrical>
+				<number-apus type="int">2</number-apus>
+			</electrical>
+			<engines>
+				<number type="int">8</number>
+				<set>
+					<name type="string">DT18T</name>
+					<number type="int">4</number>
+				</set>
+				<set>
+					<name type="string">GP7277</name>
+					<number type="int">4</number>
+				</set>
+			</engines>
+			<fuel>
+				<number-pumps type="int">2</number-pumps>
+			</fuel>
+		</systems>
 		<settings>
 			<setting>
 				<name type="string">Engines</name>
@@ -1022,6 +1085,7 @@
 		</an-124>
 		<voodoomaster>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
+			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Autostart/Autostart.nas</file>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Settings/Settings.nas</file>
 			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Pilots/Pilots.nas</file>
 		</voodoomaster>

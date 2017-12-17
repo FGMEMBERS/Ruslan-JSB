@@ -23,20 +23,26 @@
 			<label>An-124 Ruslan</label>
 
 			<item>
-				<label>Autostart</label>
-				<binding>
-					<command>property-toggle</command>
-					<property>sim/model/start-idling</property>
-				</binding>
-			</item>
-
-			<item>
 				<label>System Settings</label>
 				<binding>
 					<command>nasal</command>
 					<script>
 						var settings_dialog = voodoomaster.SettingsDialog.new();
 					</script>
+				</binding>
+			</item>
+
+			<item>
+				<label>Automatic Start/Shutdown</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var autostart_dialog = voodoomaster.AutostartDialog.new();
+					</script>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>sim/model/start-idling</property>
 				</binding>
 			</item>
 
