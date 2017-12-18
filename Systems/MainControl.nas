@@ -37,12 +37,14 @@ var enginecontrol=func{
 	var eng7ff=getprop("/fdm/jsbsim/propulsion/engine[7]/fuel-flow-rate-pps");
 
 	var fftotal=eng0ff+eng1ff+eng2ff+eng3ff+eng4ff+eng5ff+eng6ff+eng7ff;
-	var seconds=getprop("/fdm/jsbsim/propulsion/total-fuel-lbs")/fftotal;
-	var hours=seconds/3609;
-	var range=hours*getprop("/instrumentation/gps/indicated-ground-speed-kt");
-	setprop("/voodoomaster/engines/fuel_flow_total_pps", fftotal);
-	setprop("/voodoomaster/engines/airtime", hours);
-	setprop("/voodoomaster/engines/range_nm", range);
+	if (fftotal>0.00) {
+		var seconds=getprop("/fdm/jsbsim/propulsion/total-fuel-lbs")/fftotal;
+		var hours=seconds/3600;
+		var range=hours*getprop("/instrumentation/gps/indicated-ground-speed-kt");
+		setprop("/voodoomaster/engines/fuel_flow_total_pps", fftotal);
+		setprop("/voodoomaster/engines/airtime", hours);
+		setprop("/voodoomaster/engines/range_nm", range);
+	}
 	settimer(enginecontrol, 2);
 }
 

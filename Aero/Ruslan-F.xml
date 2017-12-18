@@ -80,7 +80,7 @@
 		<izz unit="KG*M2"> 48870406.4866679 </izz>
 		<emptywt unit="KG" > 175029.9558 </emptywt>
 		<location name="CG" unit="M">
-			<x>  1.00 </x>
+			<x>  0.50 </x>
 			<y>  0.00 </y>
 			<z>  0.00 </z>
 		</location>
@@ -170,9 +170,9 @@
 			<static_friction>  0.80 </static_friction>
 			<dynamic_friction> 0.50 </dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">      870000.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 214000.00 </damping_coeff>
-			<damping_coeff_rebound unit="LBS/FT/SEC"> 214000.00 </damping_coeff_rebound>
+			<spring_coeff unit="LBS/FT">      470000.00 </spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC"> 107000.00 </damping_coeff>
+			<damping_coeff_rebound unit="LBS/FT/SEC"> 107000.00 </damping_coeff_rebound>
 			<break_group>NONE</break_group>
 			<max_steer unit="DEG">45</max_steer>
 			<retractable>1</retractable>
@@ -187,9 +187,9 @@
 			<static_friction>  0.80 </static_friction>
 			<dynamic_friction> 0.50 </dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">      870000.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 214000.00 </damping_coeff>
-			<damping_coeff_rebound unit="LBS/FT/SEC"> 214000.00 </damping_coeff_rebound>
+			<spring_coeff unit="LBS/FT">      470000.00 </spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC"> 107000.00 </damping_coeff>
+			<damping_coeff_rebound unit="LBS/FT/SEC"> 107000.00 </damping_coeff_rebound>
 			<break_group>NONE</break_group>
 			<!-- max_steer unit="DEG">
 				<property>/controls/gear/nosegear-angle</property>
