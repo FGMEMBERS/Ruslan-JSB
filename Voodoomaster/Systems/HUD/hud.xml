@@ -449,10 +449,150 @@
 	</label>
 
 	<gauge>
+		<name>Elevator</name>
+		<x>-125</x>
+		<y>-60</y>
+		<width>10</width>
+		<height>100</height>
+		<option>vertical</option>
+		<option>left</option>
+		<option>notext</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>true</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.5</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/controls/flight/elevator</property>
+			<max>1.0</max>
+			<min>-1.0</min>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</gauge>
+
+	<gauge>
+		<name>Elevator_Trim</name>
+		<x>-125</x>
+		<y>-60</y>
+		<width>10</width>
+		<height>100</height>
+		<option>vertical</option>
+		<option>right</option>
+		<option>notext</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>true</cap-left>
+		<marker-offset>0.5</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/controls/flight/elevator-trim</property>
+			<max>1.0</max>
+			<min>-1.0</min>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</gauge>
+
+	<gauge>
+		<name>Elevator</name>
+		<x>125</x>
+		<y>-60</y>
+		<width>10</width>
+		<height>100</height>
+		<option>vertical</option>
+		<option>left</option>
+		<option>notext</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>true</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>0.5</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/controls/flight/elevator</property>
+			<max>1.0</max>
+			<min>-1.0</min>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</gauge>
+
+	<gauge>
+		<name>Elevator_Trim</name>
+		<x>125</x>
+		<y>-60</y>
+		<width>10</width>
+		<height>100</height>
+		<option>vertical</option>
+		<option>right</option>
+		<option>notext</option>
+		<major-divisions>50</major-divisions>
+		<minor-divisions>0</minor-divisions>
+		<tick-bottom>true</tick-bottom>
+		<tick-top>true</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>true</cap-left>
+		<marker-offset>0.5</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+		<input>
+			<property>/controls/flight/elevator-trim</property>
+			<max>1.0</max>
+			<min>-1.0</min>
+		</input>
+		<condition>
+			<equals>
+				<property>/voodoomaster/hud/mode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</gauge>
+
+	<gauge>
 		<name>Throttle</name>
 		<x>-100</x>
 		<y>-60</y>
-		<width>5</width>
+		<width>10</width>
 		<height>100</height>
 		<option>vertical</option>
 		<option>left</option>
@@ -487,7 +627,7 @@
 		<name>Throttle</name>
 		<x>100</x>
 		<y>-60</y>
-		<width>5</width>
+		<width>10</width>
 		<height>100</height>
 		<option>vertical</option>
 		<option>right</option>

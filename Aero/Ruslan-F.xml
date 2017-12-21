@@ -80,7 +80,7 @@
 		<izz unit="KG*M2"> 48870406.4866679 </izz>
 		<emptywt unit="KG" > 175029.9558 </emptywt>
 		<location name="CG" unit="M">
-			<x>  0.50 </x>
+			<x>  1.50 </x>
 			<y>  0.00 </y>
 			<z>  0.00 </z>
 		</location>
